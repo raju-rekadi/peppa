@@ -1,0 +1,86 @@
+<%= render :partial => 'shared/nav' %>
+<div class="container" style="margin-top: 100px;">
+  <% if current_user.present? %>
+    <% count_list = current_user.wishlists.count %>
+    <div>
+      <% if (count_list != 0) %> 
+        <div class="row cart_list">
+          <div class="col-md-12 cart_items">
+              <div class="hm_featured_books_title">
+                <div class="h5">My Wishlist (<%= current_user.wishlists.count %>)</div>
+              </div>
+              <% @wishlists.each do |wishlist| %>
+                <div class="cart_item">
+                  <div class="" id="leftbox">
+                    <%= link_to dish_path(wishlist.dish) do %> 
+                      <% wishlist.dish.pictures.each do |p| %>
+                        <%= image_tag(p.image_url, :class => 'img_cart') %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="" id="middlebox">
+                       <p><%= wishlist.dish.name%></p>
+                   <p>&#8377; <%= wishlist.dish.price%></p>
+                  </div>
+                  <div class="" id="rightbox">
+                      <%= link_to "Add to cart", dish_add_cart_path(wishlist.dish, wishlist), :method => :post, :class => 'btn btn-sm btn-info'%> &nbsp;&nbsp;
+                      <%= link_to 'Remove', '#',{:class=>"btn btn-sm btn-danger", "data-toggle"=>"modal", "data-target" => "#delete-#{wishlist.id}"} %><br><br><br>
+                        <div class="modal fade  " id="delete-<%= wishlist.id %>">
+                          <div class="modal-dialog ">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                               <h5><%= wishlist.dish.name %></h5>
+                              </div>
+                              <div class="modal-body">
+                               <p>Are you sure to remove this Item?</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">  Cancel </button>
+                                <%= link_to 'Delete',dish_wishlist_path(wishlist.dish, wishlist), method: :delete, :class => 'btn btn-danger btn-sm' %>
+                               
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                  </div>  
+                </div>
+              <% end %>
+          </div>
+        </div>
+      <% else %>
+        <div>
+          <div class="wishlistEmpty-container">
+            <div class="myntraweb-sprite wishlistEmpty-icon sprites-emptyIcon"> 
+
+            </div>
+            <div class="wishlistEmpty-heading">
+              YOUR WISHLIST IS EMPTY
+            </div>
+            <div class="wishlistEmpty-info">
+             Add Something to Make happy :)
+            </div>  
+            <div>
+              <a href="/" class="wishlistEmpty-button">CONTINUE SHOPPING</a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  <% else %>
+      <div class="wishlistEmpty-container">
+        <div class="myntraweb-sprite wishlistEmpty-icon sprites-emptyIcon">
+              
+        </div>
+        <div class="wishlistEmpty-heading">
+               PLEASE LOG IN
+        </div>
+        <div class="wishlistEmpty-info">
+          Login to view items in your wishlist.
+        </div>
+        <div>
+          <%= link_to "Login", new_user_session_path, :class => 'wishlistEmpty-button' %> 
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
+

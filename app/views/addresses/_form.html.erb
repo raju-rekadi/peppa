@@ -1,0 +1,39 @@
+<div class="form-row">
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name , :class => 'form-control', :placeholder => 'Full name',:maxlength => 30 %>
+  </div>
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :mobile %>
+    <%= f.text_field :mobile , :class => 'form-control', :placeholder => 'mobile', :maxlength => 10 %>
+  </div>
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode , :class => 'form-control', :placeholder => 'pincode', :maxlength => 6 %>
+  </div>
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :house_no %>
+    <%= f.text_field :house_no , :class => 'form-control', :placeholder => 'house_no', :maxlength => 15%>
+  </div>
+
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :street %>
+    <%= f.text_field :street , :class => 'form-control', :placeholder => 'street', :maxlength => 45 %>
+  </div>
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :landmark %>
+    <%= f.text_field :landmark , :class => 'form-control', :placeholder => 'land_mark', :maxlength => 45 %>
+  </div>
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :state %>
+    <%= f.select( :state, options_for_select("Select one"), {:prompt => 'Select state'}, {:class => 'form-control'}) %>
+  </div>  
+  <div class="col-md-6 mb-3 address_form_col">
+    <%= f.label :city %>
+    <%= f.select( :city, options_for_select("Select one"), {:prompt => 'Select city'}, {:class => 'form-control'}) %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  </div>
+</div>
+<%= link_to 'Back', :back, :class => 'btn btn-info'%>
+<%= f.submit "Save", :class => 'btn btn-success modal_btn' %>

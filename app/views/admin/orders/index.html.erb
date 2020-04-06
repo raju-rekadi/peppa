@@ -1,0 +1,40 @@
+<div class="container">
+  <%= render :partial => 'admin/shared/nav'%>
+  <div><br>
+    <h3>All orders</h3><br>
+    <table  class="table" >   
+      <thead class="thead-light">
+        <tr>
+          <th>User</th>   
+          <th>Order No</th> 
+          <th>Order Date</th>
+          <th>Payment status</th>
+          <th>Order status</th>
+          <th>Total</th>   
+          <th>Update status</th>
+        </tr>   
+      </thead>   
+      <tbody id = "orders">  
+        <% @orders.each do|order|%>
+        <tr>
+          <td><%= order.user.email %></td>
+          <td><%= order.transaction_id %></td>
+          <td><%= order.created_at.to_date %></td>
+          <td><%= order.payment %></td>
+          <td><%= order.order_status %></td>   
+          <td>&#8377; <%= order.amount %></td>
+          <td><i class="fas fa-map-marker-alt"></i> <%= link_to "Tracking Update", admin_order_path(order), :class =>'link' %></td> 
+        </tr>
+        <% end %>    
+      </tbody>   
+    </table>
+  </div>
+    <div>
+    <div style="" class="link_back">
+      <%= link_to 'Back', admin_index_path, :class => 'btn btn-info btn-block btn_back'%>
+    </div>
+    <%= will_paginate @orders, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
+  </div> 
+</div>  
+
+  

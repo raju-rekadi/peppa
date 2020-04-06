@@ -1,0 +1,386 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ /* .img{
+    height:50px;
+    width:50px;
+  }*/
+  .new_admin{
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+
+/* admin/restaurants index page*/
+  .modal-img{
+    height: 350px;
+    width: 450px;
+  }
+
+/* admin/restaurant/new & admin/restaurant/edit*/
+  .new_restaurant, .edit_restaurant{
+    background-color: #f3f3f3;
+    margin: 0px auto;
+    width: 1000px;
+
+    padding: 20px 50px;
+  }
+
+  .img_preview{
+    height: 100px;
+    width: 100px;
+  }
+  
+
+ /* .restaurant_form {
+    margin: 0 auto;
+    width: 450px;
+    background-color: white;
+    padding-left: 0px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .restaurant_form label{
+    text-align: right;
+    float: left;
+  }
+
+  .restaurant_form input{
+    margin-right: 180px;
+  }*/
+
+  /* admin/restaurant show page*/
+  .img_restaurant{
+    height:300px;
+    width:300px;
+  }
+
+  .no_padding_right {
+      padding-right: 0;
+  }
+
+  .no_padding_left {
+      padding-left: 0;
+  }
+
+	.err {
+  	color: red;
+  	font-size: 14px;
+	}
+
+	#flash_alert{
+  	color: red;
+  	font-size: 14px;
+	}
+
+	.form-group{
+    width:356px;
+  }
+
+  /*Pagination*/
+  .pagination>li>span:hover {
+    z-index: 2;
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+ }
+
+ .pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+  
+    border-radius: 4px;
+}
+.pagination>li {
+    display: inline;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.pagination>.active>span, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+  
+/*Admin order show page */
+  .admin_col{
+    background-color: #f5f4f4;
+    padding: 50px;
+    padding-top: 70px;
+  }
+
+  th, td {
+    padding: 5px;
+    text-align: left;    
+  }
+  .order_img{
+    height: 70px;
+    width: 70px;
+  }
+
+  .order_link {
+    background: #2874f0;
+    color: #fff;
+    box-shadow: none;
+    border: 1px solid #2874f0;
+    padding: 6px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    width: 136px;
+  }
+
+
+  .order_tracking {
+    width: 450px;
+    margin: 100px auto 20px;
+    height: 200px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-top: 25px;  
+  }
+
+
+  .menublock {
+  float: right;
+}
+.link_back{
+  width: 150px;
+  margin-left:43%;
+  text-align: center;
+  display: inline-block;
+  margin-top: 4px;
+}
+.btn_back{
+   background-color: #337ab7;
+}
+
+.btn_back:hover{
+   background-color: #337ab7;
+}
+
+.order_show_row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.order_show_img{
+  height: 200px;
+  width: 200px;
+}
+
+/*Admin dashboard navigation*/
+
+/* Admin restaurant new form validation*/
+
+  .error{
+    border:1px solid #de6565;
+    color: #ca3838;
+  }
+
+  label{
+    border:none !important;
+  }
+
+  .res_new{
+    height: 100px !important;
+    margin-bottom: 0px !important;
+  }
+/* Admin dish new form validation*/
+  .dish_column{
+    height: 90px;
+  }
+  .dish_field{
+    margin-bottom:8px !important;
+  }
+
+
+
+
+
+
+
+
+/*Admin Dashboard*/
+  a:hover, a:focus {
+  text-decoration: none;
+}
+
+.navbar-nav{
+  display:inline;
+  flex-direction: row !important;
+}
+#container {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+.container-fluid {
+  padding: 0 20px;
+}
+#header {
+  min-height: 0px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #d8d8d8;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 3px #ccc;
+}
+#header .container-fluid {
+  padding: 0;
+}
+#header .navbar-header {
+  transition: 0.3s all;
+ border-right: 1px solid #dee2e6!important;
+  width: 241px;
+ 
+}
+#header .navbar-brand {
+  margin-left: 8px;
+}
+
+#header .navbar-nav > li {
+  display: inline-block;
+} 
+#header .navbar-right > li {
+   border-left: 1px solid #eee; 
+}
+
+#header .navbar-right {
+  margin-right: 0;
+  margin: 0px 0px 0px 0px;
+  float: right;
+}
+#header #user-profile {
+  max-width: 30px;
+  margin-right: 15px;
+}
+
+#header .nav > li > a {
+  padding: 0px 21px;
+  line-height: 45px;
+  cursor: pointer;
+  color: #6D6D6D;
+   border-left: 0px solid #E1E1E1; 
+}
+  
+#header .nav > li.dropdown > a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#header .nav > li.dropdown > a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+  #header .navbar-header {
+    display: inline-block;
+  }
+  
+  #header #user-profile {
+    max-width: none;
+  } 
+  
+  #header .nav > li > a {
+    line-height: 60px;
+  }
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+ 
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+      width: 15rem;
+   
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+  border-bottom: 1px solid #dee2e6!important;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.sidebar-wrapper .sidebar-header {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sidebar-header .user-pic {
+    float: left;
+    width: 60px;
+    padding: 2px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.sidebar-header .user-pic img {
+     object-fit: cover; 
+     height: 100%; 
+    width: 100%;
+}
+.sidebar-header .user-info .user-role {
+    font-size: 12px;
+}
+.sidebar-header .user-info .user-status {
+    font-size: 11px;
+    margin-top: 4px;
+}
+.sidebar-header .user-info .user-status i {
+    font-size: 8px;
+    margin-right: 4px;
+    color: #5cb85c;
+}
+.main_div {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}

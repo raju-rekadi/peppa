@@ -1,0 +1,97 @@
+<br>
+<div class="container">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">Admin panel <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <div>
+        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'btn btn-danger btn-sm') %>  
+      </div>
+    </div>
+  </nav>
+
+  <div style="margin-top: 26px;">
+    <div>
+      <h3 >Order Details</h3>
+    </div>
+    <div class="@order" id="order_<%=@order.id %>">
+      <div class="row order_show_row" style="background-color: #f9f9f9;padding: 9px;border: 1px solid #d7d7d7; border-bottom: 0px;">
+        <div class="col-md-6">
+          <div class="Order_btn">
+            Payment Details
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="Order_btn">
+            Tracking status <b> <%= @order.order_status %> </b>
+            <span style="float: right;">
+              <i class="fas fa-map-marker-alt" style="font-size: 18px;"> </i> <%= link_to "Update tracking", edit_admin_order_path(@order), :class =>"link" %>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row order_show_row" style="border: 1px solid #d7d7d7; padding: 15px;"> 
+        <div class="col-md-6">
+          <p> <b> Payment Through: </b> <%= @order.payment_type %> </p>
+          <p> <b> Payment Status: </b> <%= @order.payment %> </p>
+          <p> <b> Payment id: </b> <%= @order.payment_id %> </p>
+          <p> <b> Ordered on: </b> <%= @order.created_at.to_date %> </p>
+          <p> <b> Transaction id: </b> <%= @order.transaction_id %> </p>
+          <p><b>Total amount: </b>&#8377; <%= @order.amount %></p>
+        </div>
+        <div class="col-md-6">
+          <h4>shipping address</h4>
+          <b><%= @order.address.full_name %></b><br>
+          <span><%= @order.address.mobile %></span><br>
+          <span><%= @order.address.house_no %></span><br>
+          <span><%= @order.address.street %></span><br>
+          <span><%= @order.address.landmark %></span><br>
+          <span><%= @order.address.city %>,<%= @order.address.pincode %></span><br>
+          <span><%= @order.address.state %></span><br>
+        </div>
+      </div>
+    </div><br>
+
+    <div class="@order" id="order_<%=@order.id %>">
+      <div class="row order_show_row" style="background-color: #f9f9f9;padding: 9px;border: 1px solid #d7d7d7; border-bottom: 0px;">
+        <div class="col-md-12">
+          <div class="Order_btn">
+            Products
+          </div>
+        </div>
+      </div>
+
+      <div class="row order_show_row" style="border: 1px solid #d7d7d7; padding: 15px;">
+        <% @order.line_items.each do |d| %>
+        <div class="col-md-4">
+          <div>
+            <% d.dish.pictures.each do |p| %>
+              <%= image_tag(p.image_url, :class => 'order_show_img') %>
+            <% end %>
+          </div>
+          <div>
+            <span><b><%= d.dish.name %></b></span><br>
+            <span>Price: &#8377;<%= d.dish.price %> &#x2715;</span>
+            <%= d.quantity %><br><br>
+          </div>
+        </div>
+        <% end %>
+        <div class="col-md-4">
+        
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div><br>
+    <div style="" class="link_back">
+      <%= link_to 'Back', admin_orders_path, :class => 'btn btn-info btn-block btn_back'%>
+    </div>
+  </div> <br><br>
+</div>

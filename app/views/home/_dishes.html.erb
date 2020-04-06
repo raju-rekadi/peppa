@@ -1,0 +1,56 @@
+<% if @dishes.present? %>
+  <% @dishes.each do |d| %>
+    <% d.pictures.each do|p|%>
+      <div class="col-md-4 image-box " >
+        <div class="card" style="border:none;">
+          <%= link_to image_tag(p.image_url, :class => 'image-box1 hover_img'), dish_path(d)   %>
+
+          <div class="rating single_item" id ="dish_<%= d.id %>">
+            <% if current_user.present? %>
+              <% pre_wishlisted = d.wishlists.find { |wishlist| wishlist.user_id == current_user.id} %>
+              
+              <% if pre_wishlisted %>
+                <%= link_to '', dish_wishlist_path(d, pre_wishlisted), :class => 'fa fa-heart', :id => 'heart',method: :delete, :title => 'Remove from wishlist'%>
+              <% else %>
+                <%= link_to '', dish_wishlists_path(d),:class => 'fa fa-heart-o', :id => 'heart1', method: :post, :title => 'Add to wishlist' %>
+              <% end %>
+            <% else %>
+              <%= link_to '', dish_wishlists_path(d),:class => 'fa fa-heart-o', :id => 'heart1', method: :post, :title => 'Add to wishlist' %>  
+           <% end %>
+          </div>
+
+          <figcaption>
+            <div>
+              <h2><%= link_to d.name, dish_path(d), :class => 'restaurant_link' %></h2>
+                <% d.restaurants.each do |r|%>
+                  <p>
+                    <span style="font-size:15px; float: left;">
+                       <%= link_to r.name, restaurant_path(r), :class => 'restaurant_link' %>
+                    </span>
+                    <span class="price">&#8377; <%= d.price%></span>
+                  </p>
+              <% end %>
+            </div>
+          </figcaption>
+        </div>
+
+        <div class="dish_btm">
+          <% d.restaurants.each do |r| %>
+            <ul>
+              <li>
+                <a style="text-decoration-line: none;" target="_blank" href="http://maps.google.com/?q=<%=(r.locations.pluck(:street, :city, :state, :country).join(',')) %>">
+                    <% r.locations.each do |l|%>
+                      <%= l.street %>,<%= l.city %>,<%= l.state %>, <%=l.pincode%></a>
+                    <% end %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+
+      </div>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <div class="no_data">No results found</div>
+<% end %>

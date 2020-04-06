@@ -1,0 +1,195 @@
+<%= render :partial => 'shared/nav'%>
+<div class="container" style="margin-top: 100px;">
+  <div class="media-body">
+    <div class="food_sml_right">
+      <h2 class="restra_title" >
+        <%= @dish.name %>  
+      </h2>
+      <p class="restra-txt" style = "border-bottom: 2px solid #d8d8d8;">
+        <% @dish.restaurants.each do |r| %> 
+          <%= link_to r.name, restaurant_path(r), :class => 'rest_name' %>
+        <% end %>  
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="image-box col-lg-12 col-md-12 col-sm-12 col-xs-12 no_padding_right 
+      no_padding_left hover_outr" style="margin: 0px;"> 
+      <div class="single_item card">
+        <%= link_to dish_path(@dish) do %> 
+          <div class="image-box2">
+           <% @dish.pictures.each do|p|%>
+              <%=image_tag(p.image_url.to_s, :class => 'show_dish')%>
+            <% end %>
+          </div>  
+        <% end %>
+
+        <div class="rating" id ="dish_<%= @dish.id %>">
+          <% if current_user.present? %>
+            <% pre_wishlisted = @dish.wishlists.find { |wishlist| wishlist.user_id == current_user.id} %>
+        
+            <% if pre_wishlisted %>
+              <%= link_to '', dish_wishlist_path(@dish, pre_wishlisted), :class => 'fa fa-heart', :id => 'heart',method: :delete%>
+            <% else %>
+              <%= link_to '', dish_wishlists_path(@dish),:class => 'fa fa-heart-o', :id => 'heart1', method: :post %>
+            <% end %>
+          <% else %>
+            <%= link_to '', dish_wishlists_path(@dish),:class => 'fa fa-heart-o', :id => 'heart1', method: :post %>  
+          <% end %>
+        </div>
+  
+        <div class="card-text_dish">
+          <figcaption>
+            <div>
+              <h2><%= @dish.name %></h2>
+              <% @dish.restaurants.each do |r|%>
+                <p><span style="font-size:15px; float: left;"><%= r.name %></span>
+                   <span class="price">&#8377; <%= @dish.price%></span>
+                </p>
+              <% end %>
+            </div>
+          </figcaption>
+        </div>
+      </div>
+    </div>
+
+    <% unless  @dish.id == Dish.first.id   %>
+      <%= link_to '', Dish.get_previous_dish(@dish), :class => 'fa fa-chevron-left top-left previous_dish round">&#8249;', :style => 'font-size:20px;'  %>
+    <% end %>
+
+    <% unless  @dish.id == Dish.last.id   %>
+      <%= link_to  '', Dish.get_next_dish(@dish), :class => 'fa fa-chevron-right top-right next_dish round">&#8249;', :style => 'font-size:20px;' %>
+    <% end %>
+
+  </div>
+</div>
+  
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no_padding_right 
+          no_padding_left hover_outr" id="overall_rating"> 
+      <%= render 'dishes/overall_rating' %>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no_padding_right 
+              no_padding_left hover_outr" style="margin: 0px;" id ="all_reviews"> 
+      <div align="right">
+        <%= link_to "Add to Cart", line_items_path(:dish_id =>  @dish.id), :method => :post, :class => 'btn btn-sm btn-success' %><br>
+
+        <span class="more btn_outer">
+          <span class="most_review"> All Reviews </span>
+          <% if current_user.nil? %> 
+            <%= link_to 'Write a Review', ratings_path, :class => 'load-more', :style => 'margin-left:100px;', method: :post %> 
+          <% end %>
+
+          <% if current_user.present? %>
+            <% pre_rated = @dish.ratings.find { |rating| rating.user_id == current_user.id} %>
+            <% if pre_rated.nil? %>
+              <%= link_to 'Write a Review','#modaldevise', "data-toggle" => "modal", "data-target"=>"#modaldevise", :class => 'load-more', :style => 'margin-left:100px;' %>
+                <div class="modal fade" id="modaldevise" tabindex="-1" role="dialog" 
+                    aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 style ="color: black;"class="modal-title" id="myModalLabel">Add Rating</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+
+                      <div class="modal-body modal_form">
+                        <%= render 'rating'%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+          <% end %>
+        </span>
+      </div><br>
+
+      <div class="review_left"  >
+        <% @dish.ratings.each do |rate| %>
+          <div class="media" style="margin-bottom: 15px; background-color:#fff; padding: 15px;
+                              border: 1px solid #fbeded; box-shadow: 1px 2px 3px #e2e2e2;">
+            <div class="media-body">
+              <div class="food_sml_right"  style="">
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div>
+                    <p style="margin-bottom: 15px; "> 
+                      <span style="text-transform: capitalize;">
+                        <%= image_tag('user.png', :class => 'user_img')%> &nbsp;<%= rate.user_name %>  
+                      </span>
+                      <span  class = "time" style="margin-left: 10px;float: right;font-size: 11px;color: #695f5f;">
+                        <%= time_ago_in_words(rate.updated_at) %> ago
+                      </span>
+                    </p>
+                  </div>
+                  
+                  <div id ="user_<%= rate.user_id %>">
+                    <div class="review-rating" data-score = "<%= rate.rating%>"></div>
+                    <p style = 'font-size: 14px;'><%= rate.comments %></p>
+                    <span style="float:right"; >
+                      <% if pre_rated.present? %>
+                        <% if current_user.id == rate.user_id %>
+                          <%= link_to 'Edit', edit_dish_rating_path(@dish, rate.id), :remote => true ,
+                          :class => 'review_action'  %>
+                         <%= link_to 'Delete', dish_rating_path(@dish, rate.id), :remote => true ,:class => 'review_action' ,method: :delete %>
+                        <% end %>
+                      <% end %>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        <% end %>
+      </div> 
+    </div>
+
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h2 id="footer_text"> Do more with the app. Download it today!</h2>
+        <ul>
+          <li>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.peppa.app"><img src="<%= asset_path( 'fooimage.png' ) %>" /></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://itunes.apple.com/us/app/peppa/id1270825524?ls=1&amp;mt=8"><img src="<%= asset_path( 'fooimg2.png' ) %>" /></a>
+          </li>
+        </ul>
+      </div>
+        <div class="col-lg-4 col-md-4 pull-right col-xs-12 phone-img">
+        <img class="phone_img" src="<%= asset_path('phone-img.png')%>">
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.rating-form').raty({
+      path:'/assets/',
+      scoreName: 'rating[rating]',
+      score: 1
+    });
+
+    $(".review-rating").raty({
+      readOnly: true,
+      score: function() {
+      return $(this).attr("data-score");
+      },
+      path: "/assets/"
+    }); 
+});
+</script>

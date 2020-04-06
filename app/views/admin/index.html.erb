@@ -1,0 +1,46 @@
+<div class="">
+   <%= render :partial => 'admin/shared/header'%>
+
+  <div class="main_div">
+    <%= render :partial => 'admin/shared/side_bar'%>
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1><hr>
+        
+        <div class="row no-gutters" style="margin-top: 40px; text-align: center;">
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+              <%= link_to 'Restaurant & Dishes management' , admin_restaurants_path %><br/><br/>
+          </div>
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+            <%= link_to 'Orders management' , admin_orders_path %><br/><br/>
+          </div>
+
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+            <%= link_to 'Users' , admin_users_path %><br/><br/>
+          </div>
+        </div>
+        <div class="row no-gutters" style="margin-top: 40px;" align="center">
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+            <h3>Total Restaurants</h3>
+            <%= Restaurant.all.count  %>
+          </div>
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+            <h3>Total orders</h3>
+            <%= Order.all.count  %>
+          </div>
+          <div class="col-sm-12 col-md mr-md-3 admin_col">
+            <h3>Registered users</h3>
+            <%= User.all.count %>
+          </div>
+        </div>
+       
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

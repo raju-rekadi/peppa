@@ -1,0 +1,31 @@
+
+<div class="container" >
+  <%= render :partial => 'admin/shared/nav'%>
+  <div align="center" class="restaurant_form u-dimension-2">
+    <% @dish.pictures.each do|p|%>
+      <%= image_tag(p.image_url, :class => 'img') %> 
+    <% end %>  
+    <h5><%= @dish.name %></h5>
+    <%= form_for @rating, url: {action: :create} do |f| %>
+      <div class="form-group">
+        <div class="col-sm-12">    
+          <label>Add rating </label>
+          <span class="err"><%= @rating.errors[:rating].join('. ') %></span><br/>
+            <%= f.text_field :rating , :class => 'form-control', :placeholder => 'Rating'%>
+        </div>
+      </div> 
+      
+      <div class= "form-group" >
+        <div class="col-sm-12">    
+          <%= f.submit "Save",class: "btn btn-block btn-primary btn-md" %> 
+        </div>
+      </div>
+
+       <div class= "form-group" >
+        <div class="col-sm-12">    
+          <%= link_to 'Back to dishes',admin_restaurant_dishes_path,:class => "btn btn-sm btn-info "  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

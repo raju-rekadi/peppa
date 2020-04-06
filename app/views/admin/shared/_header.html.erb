@@ -1,0 +1,18 @@
+<header id="header" class="navbar navbar-static-top">
+    <div class="container-fluid">
+      <div id="header-logo" class="navbar-header">
+        <a href="/"><img class="" src="/assets/logo-5d7e86f5f78e8b26ba39fb3fd6cc059cdfffe7687114f2b7b6aa385f2e309722.png"></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="">
+          <a href="/admin" class="" >
+            <img src="https://demo.opencart.com/image/cache/profile-45x45.png" alt="demo demo" title="demo" id="user-profile" class="rounded-circle">Admin 
+          </a>
+        </li>
+        <li>
+        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'fa fa-sign-out') %>
+      </a></li>
+        </ul>
+    </div>
+  </header>

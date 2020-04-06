@@ -1,0 +1,49 @@
+<% if @dishes.present? %>
+  <% @dishes.each do |d| %>
+    <% d.pictures.each do|p|%>
+      <div class="col-md-6 image-box" onclick="window.location.href='<%=dish_path(d)%>'">
+        <div class="card">
+          <%= link_to image_tag(p.image_url, :class => 'image-box1 hover_img'), dish_path(d)   %>
+          <div class="rating">
+            <span class="restaurant_rating"><%= d.ratings.average(:rating).present? ? d.ratings.average(:rating).round(1) : 0 %>
+              <i class="fa fa-star checked"></i>
+            </span>         
+          </div>
+          <figcaption>
+            <div>
+              <h2><%= d.name %></h2>
+              <% d.restaurants.each do |r|%>
+                <p>
+                  <span style="font-size:15px; float: left;">
+                     <%= link_to r.name, restaurant_path(r), :class => 'restaurant_link' %>
+                  </span>
+                  <span class="price">&#8377; <%= d.price%></span>
+                </p>
+              <% end %>
+            </div>
+          </figcaption>
+        </div>
+
+        <div class="dish_btm">
+          <% d.restaurants.each do |r| %>
+            <ul>
+              <li>
+                <a style ="text-decoration-line: none;" target="_blank" href="http://maps.google.com/?q=<%=(r.locations.pluck(:street, :city, :state, :country).join(',')) %>">
+                    <% r.locations.each do |l|%>
+                      <%= l.street %>,<%= l.city %>,<%= l.state %>, <%=l.pincode%></a>
+                    <% end %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <div style="margin-left: 200px;">No results found</div>
+<% end %>
+ 
+
+
+
+

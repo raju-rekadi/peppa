@@ -1,0 +1,26 @@
+<div class="container">
+  <%= render :partial => 'shared/nav' %>
+  <div align="center" style="margin-top:100px;">
+    <h2>Thanks, for you purchase!</h2><br>
+    <h2 style="color:green">Your payment was successful</h2>
+    <caption>Order details</caption>
+    <table style="width:50%" class="order_success table table-bordered table-hover">
+      <tr>
+        <th>Payed amount:</th>
+        <td>&#8377; <%= @payment.amount %></td>
+      </tr>
+      <tr>
+        <th>Order id:</th>
+        <td><%= @payment.payment_id %></td>
+      </tr>
+      <tr>
+        <th>Transaction id:</th>
+        <td><%= @payment.transaction_id %></td>
+      </tr>
+    </table>
+    <br><br>
+    <h3> <%= link_to('Your Orders', orders_path, :class => 'link') %> </h3>
+    <p><%= link_to 'Buy more', :root %></p>
+  </div>
+</div>
+

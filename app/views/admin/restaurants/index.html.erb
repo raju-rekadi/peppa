@@ -1,0 +1,93 @@
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid"><br>
+        <div>
+          <div>
+           <span class="h1">All Restaurants </span>
+            <%= link_to ' Add Restaurant', new_admin_restaurant_path, :class => 'fa fa-plus btn btn-lg add btn-success', :style => 'float:right'%>
+          </div><hr>
+          <table  class="table" >   
+            <thead class="thead-light">
+              <tr> 
+                <th>Restaurant</th> 
+                <th>Image</th>
+                <th>Location</th> 
+                <th>Dishes</th>
+                <th>Actions</th> 
+                <th>Dishes</th>    
+              </tr>   
+            </thead>   
+            <tbody id = "restaurants">  
+            <% @restaurants.each do|r|%>
+              <tr>
+                <td><%= r.name %></td>
+                <td><% r.pictures.each do|p|%>    
+                      <%= link_to image_tag(p.image_url.to_s ,:class => 'img'),'#',
+                      {:class=>" ", "data-toggle"=>"modal", "data-target" => "#myModal-#{p.id}"}%>
+                        <!-- Modal for image view-->
+                      <div class="modal fade"  id="myModal-<%= p.id %>" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content modal-img-content">
+                            <div class="modal-body">
+                              <%= image_tag p.image_url.to_s ,:class => 'modal-img'%>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %></td>
+                <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+                <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
+                <td><%= link_to '', admin_restaurant_path(r),:class => 'far fa-eye btn btn-success'
+                        %> 
+           
+                    <%= link_to '', edit_admin_restaurant_path(r), :class => 'far fa-edit btn btn-info'%>
+                    <%= link_to '', '#',{:class=>"far fa-trash-alt btn btn-danger", "data-toggle"=>"modal", "data-target" => "#delete-#{r.id}"} %>
+                    <div class="modal fade  " id="delete-<%= r.id %>">
+                        <div class="modal-dialog ">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                             <h5><%= r.name %>  Restaurant</h5>
+                            </div>
+                            <div class="modal-body">
+                             <p>Are you sure you wish to delete?</p>
+                            </div>
+                            <div class="modal-footer">
+                             <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                             <%= link_to 'Delete',admin_restaurant_path(r), method: :delete, :class => 'btn btn-danger btn-sm' %>
+                            </div>
+                          </div>
+                        </div>
+                    </div></td>
+                <td><%= link_to 'Dishes',admin_restaurant_dishes_path(r), :class => 'btn btn-sm btn-info'%></td>
+              </tr>
+            <% end %>    
+            </tbody>   
+          </table>
+        </div>
+        <div>
+          <div style="" class="link_back">
+            <%= link_to 'Back', admin_index_path, :class => 'btn btn-info btn-block btn_back'%>
+          </div>
+          <%= will_paginate @restaurants, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

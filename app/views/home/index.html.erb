@@ -1,0 +1,103 @@
+<%= render :partial => 'shared/nav' %>
+  <div style="margin-bottom: 50px;">
+    <div class="bg">
+      <div class="title">What do you <i>really</i> feel like?</div>
+        <div class="search">
+            <%= form_tag search_page_path,  method: :get, enforce_utf8: false do %>
+            <input type="text" name="search" id="search" class="form-control food_search"       placeholder="Biryani and rice" style="width: 53%; height: 50px;">
+              <button class="btn btn-default" id="submitDetails">
+                <%= image_tag ("search.png")%><span style="color: #5ac7f9;padding-left: 5px;font-size: 15px;">Search</span>
+              </button>   
+          <% end %>
+        </div>
+    </div>
+  </div>
+
+  <h2 class="sec_title">TOP RATED DISHES</h2>
+  <div class="container">
+    <div class="row">
+      <div  id ="dishes" class="col-md-12 dishes">
+        <%= render :partial => 'dishes'%>
+      </div>
+
+      <div id="paginate_load" style="margin-left: 460px;">
+        <%= will_paginate @dishes %>
+      </div> 
+    </div><br>
+
+    <div style="float: right;">
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a> 
+    </div>
+  </div>
+     
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h2 id="footer_text"> Do more with the app. Download it today!</h2>
+        <ul>
+          <li>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.peppa.app"><img src="<%= asset_path( 'fooimage.png' ) %>" /></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://itunes.apple.com/us/app/peppa/id1270825524?ls=1&amp;mt=8"><img src="<%= asset_path( 'fooimg2.png' ) %>" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4 pull-right col-xs-12 phone-img">
+        <img class="phone_img" src="<%= asset_path('phone-img.png')%>">
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script>
+  document.getElementById("location_search").addEventListener("keyup", function(event) {
+    event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("location_submit").click();
+      }
+  });
+
+  $( function() {
+    var availableTags = [
+      "Yanam",
+      "Kakinada",
+      "Visakhapatnam",
+    ];
+
+    $( "#location_search" ).autocomplete({
+      source: availableTags
+    })
+
+  } );
+
+var companyList = $("#location_search").autocomplete({ 
+  change: function submitFrmAjax(e) {    
+    var location = document.getElementById('location_search').value;
+      e.preventDefault();
+      console.log('location', location)
+        $.ajax({
+            type: "GET",
+            url: $(this).attr('href'),
+            data: {location: location, from_search:true},
+            dataType: "script",
+            success: function () {
+              if(location != '') {                       
+                      $(".location").html(location)
+                  } else {
+                      $(".location").html('SELECT LOCATION')
+                  }   
+            }
+        });
+  }
+});
+ companyList.autocomplete('option','change').call(companyList);
+</script>
+

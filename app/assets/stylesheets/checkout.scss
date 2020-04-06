@@ -1,0 +1,198 @@
+// Place all the styles related to the checkout controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+  .cart_list{
+    padding: 20px;
+  }
+
+  .cart_links{
+    color:#0d6a94;
+    font-size: 14px;
+  }
+  .cart_links:hover{
+    color: #c45500;
+    cursor: pointer;
+  }
+
+  .img_cart{
+    height: 112px;
+    width: 112px;
+  }
+
+  .quantity_icons{
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    padding-top: 1px;
+    text-align: center;
+    color:#000;
+  }
+
+  .quantity_icons:hover{
+    text-decoration:none;
+  }
+
+  .quantity {
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: center;
+    width: 46px;
+    height: 28px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    margin: 0 5px;
+  }
+
+  .sub_total{
+    padding: 20px;
+    border-top: 1px solid #e2dbdb;
+  }
+
+
+  .cartEmpty-container {
+    max-width: 980px;
+    margin: 30px auto 180px auto;
+    text-align: center;
+  }
+
+  .cartEmpty-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #282C3F;
+  }
+
+  .cartEmpty-info {
+    font-size:16px;
+    color: #94989F;
+    max-width: 380px;
+    margin:5px auto 0px;
+  }
+
+  .cartEmpty-icon{
+    display:inline-block;
+  }
+
+  .cartEmpty-img{
+    background-image:url('/assets/empty_cart.png');
+    background-size: cover;
+    height: 300px;
+    width:300px;
+  }
+
+  .cartEmpty-button{
+    border:solid 1px #3466E8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466E8;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .cartEmpty-button:hover{
+    text-decoration:none;
+    border:solid 1px #3466E8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466E8;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .cart_items{
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0.3125vw;
+    box-shadow: 0.078125vw 0.078125vw 0.625vw -0.390625vw rgba(0, 0, 0, 0.4);
+    float: left;
+    margin-top: 1.171875vw;
+    padding: 20px 20px; 
+    width: 100%;
+    border: 0.078125vw solid #ededed !important;
+  }
+
+  .hm_featured_books_title {
+    margin-bottom: 20px;
+  }
+
+  .cart_item{
+    height: 180px;
+    border-top: solid 0.078125vw #e0dddd;
+    padding-top: 20px;
+  }
+
+  #leftbox { 
+    float:left;  
+    width:25%; 
+    height:150px; 
+  } 
+  #middlebox{ 
+    float:left;  
+    width:50%; 
+    height:150px; 
+  } 
+  #rightbox{ 
+    float:right; 
+    width:25%; 
+    height:150px; 
+  }
+
+
+  .checkout_cart p {
+    border-bottom: 0.078125vw solid #e8e6e7;
+    float: left;
+    font-size: 1.2vw;
+    font-weight: 100;
+    margin: 0;
+    padding: 0.5vw 0;
+    width: 100%;   
+  } 
+
+  .address_list{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    box-shadow: 0 0 4px rgba(40,44,63,.08);
+    cursor: pointer;
+    border: 1px solid #eaeaec;
+    width: 302px;
+    height: 315px;
+    border-radius: 4px;
+  }
+
+  .address_list:hover {
+    border: 1px solid #d4d5d9;
+  }
+
+  .new{
+    background-color: #f4fdfb;
+    border: 1px solid #b9f0e5;
+  }
+
+  .address_list1{
+    padding-top: 100px;
+    box-shadow: 0 0 4px rgba(40,44,63,.08);
+    cursor: pointer;
+    border: 1px solid #eaeaec;
+    width: 302px;
+    height: 315px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .new_1{
+    border: 1px solid #b9f0e5;
+    border-radius: 4px;
+  }

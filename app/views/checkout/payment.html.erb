@@ -1,0 +1,71 @@
+<!-- Navigation -->
+<%= render :partial => 'shared/nav'%>
+<div class="container">
+  <div style="margin-top: 100px;"><br><br>
+    <div class="row">
+      <div class="col-md-6" >
+        <div>
+          <% if current_user.present? %>
+            <h3>Delivery To: </h3>
+            <div>  
+              <b><%= @select_address.full_name %></b><br>
+              <span><%= @select_address.mobile %></span><br>
+              <span><%= @select_address.house_no %></span><br>
+              <span><%= @select_address.street %></span><br>
+              <span><%= @select_address.landmark %></span><br>
+              <span><%= @select_address.city %>,<%= @select_address.pincode %></span><br>
+              <span><%= @select_address.state %></span><br>
+            </div>
+          <% end %>
+        </div><br><br><br>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Items</h2><br>
+        <table class="table">
+          <% @cart.line_items.each do |item| %>
+            <tr>
+              <td><% item.dish.pictures.each do |p| %>
+                 <%= image_tag(p.image_url, :class => 'img') %>
+                 <% end %>
+              </td>
+              <td><%= item.dish.name %></td>
+              <td>&#10005; &nbsp; <%= item.quantity %> </td>
+              <td>&#8377; <%= item.total_price %></td>
+            </tr>
+          <% end %>
+        </table>
+        <div style="text-align: right;">
+          Total: <%= number_to_currency(@cart.sub_total, :unit => "₹", :separator => ".", :delimiter => ",") %>
+        </div>
+
+        <div style="float:right;margin-top: 100px;">
+          <!-- Stripe Api checkout form -->
+           <%= form_tag orders_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Items"
+                data-currency="INR"
+                data-label = "Proceed to payment"
+                data-image = "<%= image_url 'logo.png' %>"
+                data-amount="<%= (@current_cart.sub_total * 100).floor %>"
+                data-email="<%= current_user.email %>"
+              
+                data-locale="auto">
+              </script>
+            <% end %>
+           <!-- Stripe Api checkout form -->
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>

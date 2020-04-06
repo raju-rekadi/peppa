@@ -1,0 +1,55 @@
+<div class="container">
+  <%= render :partial => 'admin/shared/nav'%>
+  <div>
+    <div>
+       <h2><b><%= @restaurant.name %> Restaurant</b> </h2> <br>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <% @restaurant.pictures.each do|p|%>
+          <%= image_tag(p.image_url, :class => 'img_restaurant') %> 
+        <% end %> 
+      </div>
+
+      <div class="col-md-4">
+        <div>
+          <label> <b>Name: </b></label>
+            <%= @restaurant.name %> 
+        </div><br/>
+
+        <div>
+          <label><b>Mobile: </b></label>
+            <%= @restaurant.phone %>
+        </div><br/>
+
+        <div>
+          <label><b>Email: </b></label>
+            <%= @restaurant.email %>
+        </div><br/>
+
+        <div>
+          <% @restaurant.locations.each do|p|%>
+            <label><b>Location: </b></label>
+            <%= p.street %> ,
+            <%= p.city %> ,
+            <%= p.pincode %> ,
+            <%= p.state %> 
+          <% end %>
+        </div><br/>
+
+        <div>
+          <label><b>Dishes: </b></label>
+             <%= @restaurant.dishes.pluck(:name).join(',') %>
+        </div><br/><br/>
+      </div>
+    </div>
+    <br>
+    <div class="restaurant_show">
+      <%= link_to 'Back to All restaurants',admin_restaurants_path,
+      :class => "btn btn-sm btn-info"  %> 
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,56 @@
+<%= render :partial => 'shared/nav'%>
+<div class="container">
+  <div class="" style="margin-top: 100px;">
+    <%= link_to 'Your Account', user_path(current_user), :class => 'link1'%> &nbsp;<i class="a-breadcrumb-divider">›</i>
+    <span>Your Addresses</span><hr>
+
+    <div class="row">
+      <div class="col-md-4" style="margin-bottom: 15px;">
+        <div class = "address_list3" style="padding-top: 150px; text-align: center;">
+          <%= link_to 'Add Address', new_address_path(x:1), :class => 'link' %> 
+        </div>
+        </div>
+      <% @addresses.each do |a| %>
+      <div class="col-md-4" style="margin-bottom: 15px;">
+        <div class = "address_list3">
+          <b><%= a.full_name %></b><br>
+          <span><%= a.mobile %></span><br>
+          <span><%= a.house_no %></span><br>
+          <span><%= a.street %></span><br>
+          <span><%= a.landmark %></span><br>
+          <span><%= a.city %>,<%= a.pincode %></span><br>
+          <span><%= a.state %></span><br><br>
+          <%= link_to 'Edit', edit_address_path(a, x:1), :class => 'link'%>&nbsp;&nbsp;
+         
+
+          <%= link_to 'Delete', '#',{:class=>"link", "data-toggle"=>"modal", "data-target" => "#delete-#{a.id}"} %><br><br><br>
+            <div class="modal fade  " id="delete-<%= a.id %>">
+              <div class="modal-dialog ">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5>Delete ?</h5>
+                  </div>
+
+                  <div class="modal-body">
+                   <p>Are you sure to remove this address?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">  Cancel </button>
+                    <%= link_to 'Delete',deactivate_address_path(a, y:1), method: :post, :class => 'btn btn-danger btn-sm' %>
+                   
+                  </div>
+                </div>
+              </div>
+            </div> 
+          <br>
+        </div>  
+        </div>
+      <% end %>
+      </div>
+  </div>
+</div>
+
+
+  <style type="text/css">
+ 
+</style>

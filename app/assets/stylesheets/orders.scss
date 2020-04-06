@@ -1,0 +1,210 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  .orders_list{
+  	width:92%;
+  	margin: 0px auto;
+  }
+
+  .order_list_item{
+  	margin-bottom: 12px;
+  }
+  .order_header{
+  	background-color: #f9f9f9;
+    padding: 9px;
+    border: 1px solid #d7d7d7;
+    border-bottom: 0px;
+  }
+
+  .order_placed{
+  	font-size: 13px;
+  	color:#555;
+  }
+
+  .order_body{
+  	border: 1px solid #d7d7d7;
+  	padding: 10px;
+  }
+
+  .order_img{
+  	height: 70px;
+  	width: 70px;
+  }
+
+  .link{
+    color:#0d6a94;
+    font-size: 16px;	
+  }
+
+  .link1{
+    color:#0d6a94;
+    font-size: 16px;  
+  }
+
+   .link1:hover{
+    color: #c45500;
+    cursor: pointer;
+    border: none;
+    outline: none; 
+  }
+
+  .link:hover{
+    color: #c45500;
+    cursor: pointer;
+    border: none;
+    outline: none; 
+  }
+
+
+/*  table.order_success th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }*/
+  
+  .order_img{
+  	height: 70px;
+  	width: 70px;
+  }
+
+  .order_link {
+      background: #2874f0;
+      color: #fff;
+      box-shadow: none;
+      border: 1px solid #2874f0;
+      padding: 6px 10px;
+      border-radius: 2px;
+     
+      cursor: pointer;
+      text-align: center;
+      width: 136px;
+  }
+
+
+  .track_card {
+      z-index: 0;
+      background-color: #ECEFF1 !important;
+      padding: 20px;
+      border-radius: 10px !important;
+  }
+
+  .top {
+      padding-top: 15px;
+      padding-left: 13% !important;
+      padding-right: 13% !important
+  }
+
+  #progressbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      color: #455A64;
+      padding-left: 0px;
+      margin-top: 30px
+  }
+
+  #progressbar li {
+      list-style-type: none;
+      font-size: 13px;
+      width: 25%;
+      float: left;
+      position: relative;
+      font-weight: 400
+  }
+
+  #progressbar .step0:before {
+      font-family: FontAwesome;
+      content: "\f10c";
+      color: #fff
+  }
+
+  #progressbar li:before {
+      width: 40px;
+      height: 40px;
+      line-height: 45px;
+      display: block;
+      font-size: 20px;
+      background: #C5CAE9;
+      border-radius: 50%;
+      margin: auto;
+      padding: 0px
+  }
+
+  #progressbar li:after {
+      content: '';
+      width: 100%;
+      height: 12px;
+      background: #C5CAE9;
+      position: absolute;
+      left: 0;
+      top: 16px;
+      z-index: -1
+  }
+
+  #progressbar li:last-child:after {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: absolute;
+      left: -50%
+  }
+
+  #progressbar li:nth-child(2):after,
+  #progressbar li:nth-child(3):after {
+      left: -50%
+  }
+
+  #progressbar li:first-child:after {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      position: absolute;
+      left: 50%
+  }
+
+  #progressbar li:last-child:after {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px
+  }
+
+  #progressbar li:first-child:after {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px
+  }
+
+  #progressbar li.active:before,
+  #progressbar li.active:after {
+      background: #651FFF
+  }
+
+  #progressbar li.active:before {
+      font-family: FontAwesome;
+      content: "\f00c"
+  }
+
+  .icon {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+     transition-property: none !important;
+  }
+
+  .icon-content {
+      padding-bottom: 20px
+  }
+
+  @media screen and (max-width: 992px) {
+      .icon-content {
+          width: 50%
+      }
+  }
+
+  .order_show_track{
+    padding-left:40px;
+    padding-right: 40px;
+    padding-top: 20px;
+  }
+  .order_show_track1{
+    padding-left:40px;
+    padding-right: 40px;
+  }
+
+
+
+

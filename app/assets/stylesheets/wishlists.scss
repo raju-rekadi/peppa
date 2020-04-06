@@ -1,0 +1,58 @@
+// Place all the styles related to the wishlists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+  .wishlistEmpty-container {
+    max-width: 980px;
+    margin: 30px auto 180px auto;
+    text-align: center;
+  }
+  .wishlistEmpty-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #282C3F;
+  }
+
+  .wishlistEmpty-info {
+  	font-size:16px;
+  	color: #94989F;
+  	max-width: 380px;
+  	margin:5px auto 0px;
+  }
+
+  .wishlistEmpty-icon{
+  
+  	display:inline-block;
+  }
+
+  .myntraweb-sprite{
+    background-image:url('/assets/empty_wishlist.png');
+    background-size: cover;
+    height: 300px;
+    width:300px;
+  }
+
+  .wishlistEmpty-button{
+  	border:solid 1px #3466E8;
+  	border-radius: 4px;
+  	font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466E8;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .wishlistEmpty-button:hover{
+    border:solid 1px #3466E8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466E8;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+  }

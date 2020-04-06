@@ -1,0 +1,58 @@
+<%= render :partial => 'shared/nav'%>
+<div class="container" style="margin-top: 100px;">
+  <% count_orders = current_user.orders.count %>
+  <% if (count_orders !=0) %>
+    <div class="orders_list">
+      <div style="margin-left: -15px">
+        <%= link_to 'Your Account', user_path(current_user), :class => 'link1'%> &nbsp;<i class="a-breadcrumb-divider">›</i><span> Your Orders </span><hr>
+      </div> 
+    
+      <% @orders.each do |order| %>
+      <div  id="order_<%=order.id %>" class="order_list_item">
+
+        <div class="row order_header" style="">
+          <div class="col-md-3">
+            <div class="order_placed">
+              Order date <br><b><%= order.created_at.strftime("%B, %d, %Y")%></b>  
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="order_placed">
+              TOTAL <br><b><b>&#8377; <%= order.amount %></b></b>  
+            </div>
+          </div>
+          <div class="col-md-6" align="right">
+            <span> <i class="fas fa-map-marker-alt"></i> <%=link_to "Track order", order_path(order),:class =>"link" %> </span>
+          </div>
+        </div>
+
+        <div class="row order_body" style="">
+          <div class="col-md-5">
+            <% order.line_items.each do |d| %>
+              <% d.dish.pictures.each do |p| %>
+                <%= image_tag(p.image_url, :class => 'order_img') %>
+              <% end %>
+              <%= d.dish.name %>
+              &#8377; <%= d.dish.price %> &#x2715;
+              <%= d.quantity %><br><br>
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            <p> <b> Order id: </b> <%= order.transaction_id %> </p>
+            <p> <b> Ordered on: </b> <%= order.created_at.strftime("%B, %d, %Y")%> </p>
+            <p><b>Total amount paid: </b>&#8377; <%= order.amount %></p>
+          </div>
+        </div>
+
+      </div>
+      <% end %>
+      <p align="center"><%= link_to 'Buy more', :root %></p><br><br><br>
+    </div>
+  <% else %>
+    <hr>
+    <div align="center" style="margin-top: 100px;">
+      <h2>Your have no orders.</h2>
+      <%= link_to "Continue Shopping", root_path, :class => 'btn btn-sm btn-success' %> 
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,99 @@
+<!-- Navigation -->
+<%= render :partial => 'shared/nav'%>
+<div class="container">
+  <div style="margin-top: 100px;">
+    <div style="margin-left:15px;">
+      <h3>Select Delivery Address</h3>
+    </div><br>
+    
+    <div class="row">
+      <div class="col-md-8" >
+        <% find_address = current_user.addresses.where(status: 'active').count %>
+        <% address1 = current_user.addresses.first %>
+        <% @user_address.each do |a| %>
+          <div class="col-md-6" style="margin-bottom: 15px;">
+            <div class="address_list" id="<%= a.id %>">  
+              <b><%= a.full_name %></b><br>
+              <span><%= a.mobile %></span><br>
+              <span><%= a.house_no %></span><br>
+              <span><%= a.street %></span><br>
+              <span><%= a.landmark %></span><br>
+              <span><%= a.city %>,<%= a.pincode %></span><br>
+              <span><%= a.state %></span><br>
+              <hr>
+              <%= link_to 'Edit', edit_address_path(a, x:2), :class=>"link" %>&nbsp;&nbsp;
+            
+              
+               <%= link_to 'Delete', '#',{:class=>"link", "data-toggle"=>"modal", "data-target" => "#delete-#{a.id}"} %><br><br><br>
+                <div class="modal fade  " id="delete-<%= a.id %>">
+                  <div class="modal-dialog ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5>Delete ?</h5>
+                      </div>
+
+                      <div class="modal-body">
+                       <p>Are you sure to remove this address?</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">  Cancel </button>
+                        <%= link_to 'Delete',deactivate_address_path(a, y:2), method: :post, :class => 'btn btn-danger btn-sm' %>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+
+            </div>
+          </div>
+        <% end %>
+       
+        <% if (find_address === 0) %> 
+          <div id="myDIV" class="col-md-12">
+            <p>ADD NEW ADDRESS</p>
+            <%= form_for @address,:url => url_for(:controller => 'addresses', :action => 'create', y:2) do |f| %>
+            <%= render :partial => 'addresses/form', locals: {f: f}%>
+            <% end %>
+          </div>
+          <%= render :partial => 'addresses/states_dropdown'%>
+        <% end %>
+
+        <% if (find_address != 0) %> 
+          <div class="col-md-6">
+            <div class="address_list1">  
+              <%= image_tag("add.png") %>
+              <p><%= link_to "ADD NEW ADDRESS",new_address_path(x:2) %></p>
+            </div>  
+          </div>
+        <% end %>
+      </div>
+            
+      <div class="col-md-4">
+        <h2>Items</h2><br>
+          <table class="table">
+            <% @cart.line_items.each do |item| %>
+              <tr>
+                <td><% item.dish.pictures.each do |p| %>
+                       <%= image_tag(p.image_url, :class => 'img') %>
+                    <% end %></td>
+                <td><%= item.dish.name %> </td> 
+                <td>&#10005; &nbsp; <%= item.quantity %> </td>
+                <td>&#8377; <%= item.total_price %></td>
+              </tr>
+            <% end %>
+          </table>
+
+          <div style="text-align: right;">
+            Total:
+            <%= number_to_currency(@cart.sub_total, :unit => "₹", :separator => ".", :delimiter => ",") %>
+          </div><br><br><br>
+         
+          <div style="float: right;">
+            <%= link_to "Proceed to Payment",checkout_payment_path(:address_id => address1), :class => 'btn btn-success', :id => 'payment' %>
+          </div>
+      </div>
+        
+    </div>
+  </div><br><br><br>
+</div>

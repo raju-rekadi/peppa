@@ -1,0 +1,43 @@
+<div class="container" >
+  <%= render :partial => 'admin/shared/nav'%>
+  <div><br>
+    <h2>All Registered users</h2><br>
+    <table  class="table" >   
+      <thead class="thead-light">
+     
+        <tr> 
+          <th>User</th> 
+          <th>Email</th>
+          <th>Signup</th>
+          <th>Orders</th> 
+          <th>Amount spent</th>
+        </tr>   
+      </thead>   
+      <tbody id = "users">  
+      <% @users.each do|r|%>
+        <tr>
+          <td><%= r.name %></td>
+          <td><%= r.email %></td>
+          <td><%= r.created_at.strftime("%B, %d, %Y") %></td>
+          <td align="center"><%= r.orders.count %></td>
+          <td align="center">
+            <% @total_spent = 0 %>
+            <% r.orders.each do |o| %>
+              <% @total_spent = @total_spent + o.amount %> <% end %>
+           &#8377; <%= @total_spent %> 
+          </td>  
+        </tr>
+      <% end %>    
+      </tbody>   
+    </table>
+  </div>
+  <div>
+    <div style="" class="link_back">
+      <%= link_to 'Back', admin_index_path, :class => 'btn btn-info btn-block btn_back'%>
+    </div>
+    <%= will_paginate @users, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
+  </div>  
+
+</div>  
+
+  

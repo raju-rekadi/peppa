@@ -1,0 +1,35 @@
+
+.error{
+  color: #f30e0e;
+  font-size: 13px;
+}
+
+
+
+.address_page{
+	padding: 30px;
+  padding-left: 50px;
+  box-shadow: 0 0 0 1px rgba(67, 41, 163, 0.1), 0 1px 8px 0 rgba(67, 41, 163, 0.1);
+}
+
+.add_address {
+  text-align: center;
+  border: 1px dotted #e2d8d8;
+  padding-top: 122px;
+}
+
+ .address_list3 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    box-shadow: 0 0 4px rgba(40, 44, 63, 0.08);
+    cursor: pointer;
+    border: 1px solid #eaeaec;
+    width: 302px;
+    height: 315px;
+    border-radius: 4px;
+}
+
+  .address_form_col{
+    height: 80px !important;
+  }

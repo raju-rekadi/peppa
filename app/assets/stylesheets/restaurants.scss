@@ -1,0 +1,120 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+  /*restaurant show page*/
+    .restaurant_rating{
+
+     
+      background-color: rgb(91, 168, 41);
+      color: #fff;
+     
+      font-weight: 600;
+      padding: 3px 6px;
+      
+      border-radius: 4px;
+      font-size: 18px;
+    
+      text-align: center;
+     
+
+  }
+
+    .restaurant_column {
+      float: left;
+      width: 100%;
+      text-align: center;
+      height: auto;
+      padding: 30px 30px 20px
+    }
+    
+    .restaurant_image{
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+
+    .restaurant_title {
+      float: left;
+      width: 100%;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 400;
+      color: #83929a;
+      font-family: 'Playfair Display', serif;
+      
+    }
+
+    .restaurant-txt {
+        float: left;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: #83929a;
+        line-height: 2;
+        letter-spacing:1px;
+    }
+
+    .restaurant-txt a {
+        color: #5ac7f9;
+        text-transform: uppercase
+    }
+
+    .rstra_phn {
+      display: inline-block;
+      margin: 0 auto;
+      font-size: 12px;
+      font-weight: 700;
+      color: #83929a;
+      line-height: 2
+    }
+
+    .ver-filter {
+      list-style: none;
+      float: left;
+      width: 100%;
+      padding: 0;
+      
+  }
+
+  .ver-filter .select_box {
+      margin-bottom: 20px;
+      width:260px;
+  }
+
+  .ver-filter li:last-child .select_box {
+      margin-bottom: 0
+  }
+
+  .ver-filter .select_box {
+      margin-bottom: 20px
+  }
+
+  .ver-filter li:last-child .select_box {
+      margin-bottom: 0
+  }
+
+  .tag_by label:before {
+      content: '';
+      right: 10px;
+      top: auto;
+      bottom: 12px;
+      padding: 0 0 2px;
+      position: absolute;
+      pointer-events: none;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 10px solid #83929a
+  }
+
+  .checked {
+    color: #fff;
+    font-size:12px;
+  }

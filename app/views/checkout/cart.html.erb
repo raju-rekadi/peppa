@@ -1,0 +1,103 @@
+<%= render :partial => 'shared/nav' %>
+<div class="container">
+	<% count_cart = @current_cart.line_items.count %>
+	<div style="margin-top: 100px;">
+		<% if (count_cart != 0) %> 
+			<div class="row cart_list">
+				<div class="col-md-8 cart_items">
+					<div class="hm_featured_books_title">
+						<% total_count = 0 %>
+							<% @current_cart.line_items.each do |item| %>
+							<%  total_count += item.quantity %>
+						<% end %>
+						<div class="h5">
+							My Shopping Bag (<%= total_count %>)
+						</div>
+					</div>
+
+					<% @cart.line_items.each do |item| %>
+					<div class="cart_item">
+						<div class="" id="leftbox">
+							<%= link_to dish_path(item.dish) do %> 
+								<% item.dish.pictures.each do |p| %>
+									<%= image_tag(p.image_url, :class => 'img_cart') %>
+								<% end %>
+							<% end %>
+						</div>
+				
+						<div class="" id="middlebox">
+							<p style="text-transform:capitalize;">
+								<%= link_to item.dish.name,dish_path(item.dish), :class => 'cart_links'%>
+							</p>
+							<% item.dish.restaurants.each do |r| %>
+								<p> Restaurant : <%= link_to r.name, restaurant_path(r), :class => 'cart_links' %></p>
+							<% end %>
+							
+							<%= link_to 'Remove', '#',{:class=>"cart_links", "data-toggle"=>"modal", 
+								"data-target" => "#delete-#{item.id}"} %><br><br><br>
+								<div class="modal fade  " id="delete-<%= item.id %>">
+									<div class="modal-dialog ">
+										<div class="modal-content">
+											<div class="modal-header">
+											 <h5><%= item.dish.name %></h5>
+											</div>
+											<div class="modal-body">
+											 <p>Are you sure to remove this Item?</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">	Cancel </button>
+												<%= link_to 'Delete',line_item_path(item), method: :delete, :class => 'btn btn-danger btn-sm' %>
+											 
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+
+						<div class="" id="rightbox">
+							<p style="text-align:right;">Price: &#8377; <%= item.dish.price %></p><br>
+							<span>Qty</span>&nbsp;&nbsp;
+							<%= link_to "-", line_item_reduce_path(:id => item), :class =>'quantity_icons', method: :post %>
+							<span class="quantity"><%= item.quantity %></span> 
+							<%= link_to "+", line_item_add_path(:id => item), :class => 'quantity_icons', method: :post %>&nbsp;
+						</div>  
+					</div>
+					<% end %> 
+				</div>
+				
+				<div class="col-md-4">
+					<div class="cart_items checkout_cart">
+						<p style=""> Sub total: <b style="float: right;">  &#8377; <%= @cart.sub_total%></b> </p>
+						<p style=""> Tax: <b style="float: right;">  &#8377; 0</b> </p>
+						<p style=""> Total: <b style="float: right;">  &#8377; <%= @cart.sub_total%></b> </p>
+					
+						<div style="float: right;"> <br><br>
+							<%= link_to "Continue Shopping", root_path, :class => 'btn btn-sm btn-success' %> 
+							<%= link_to "Checkout", checkout_address_path, :class => 'btn btn-sm btn-info'%>
+						</div><br>
+					</div>
+				</div>
+			</div>
+			<div class="sub_total" style="">
+				<span style="float:left"><%= link_to "Empty cart", cart_path(@current_cart),:class => 'cart_links',method: :delete, data: {confirm: "Are you sure?"} %> </span>
+			</div>
+		<% else %>
+			<div class="cartEmpty-container">
+				<div class="cartEmpty-img cartEmpty-icon sprites-emptyIcon">
+
+				</div>
+				<div class="cartEmpty-heading">
+					YOUR CART IS EMPTY
+				</div>
+				<div class="cartEmpty-info">
+				  Add Something to Make happy :)
+				</div>
+				<div>
+					<a href="/" class="cartEmpty-button">CONTINUE SHOPPING</a>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+

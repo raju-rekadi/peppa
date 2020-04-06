@@ -1,0 +1,27 @@
+<%= render :partial => 'shared/nav'%>
+<div class="container">
+  <div style="margin-top: 100px;">
+    <h2>Update Address</h2><hr>
+    <% id = request.query_parameters %>
+    <% x = id['x'] %>
+
+    <% if (x=='1') %>
+      <%= form_for @address, url:{action: :update, y:1 } do |f| %>
+      <%= render :partial => 'form', locals: { f: f }%>
+        <%= f.text_field :state, :style => 'display:none;', :id => 'get_state' %>
+        <%= f.text_field :city, :style => 'display:none;', :id => 'get_city' %>
+      <% end %>
+    <% end %>
+
+    <% if (x=='2') %>
+      <%= form_for @address, url:{action: :update, y:2 } do |f| %>
+       <%= render :partial => 'form', locals: { f: f }%>
+        <%= f.text_field :state, :style => 'display:none;', :id => 'get_state' %>
+        <%= f.text_field :city, :style => 'display:none;', :id => 'get_city' %>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+
+<%= render :partial => 'states_dropdown'%>
