@@ -1,4 +1,4 @@
 class Home < ApplicationRecord
-  attr_accessible :name, :price
+  attr_accessor :name, :price
 end
 
