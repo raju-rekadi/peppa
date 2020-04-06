@@ -3850,3 +3850,51 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 202ms (Views: 198.0ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2020-04-06 18:08:18 +0530
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_nav.html.erb (3962.1ms)
+  Rendered home/index.html.erb within layouts/application (3999.5ms)
+Completed 500 Internal Server Error in 4134ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionView::Template::Error (Error: error in C function asset-url: bad URI(is not URI?): top image.png
+        on line 33:23 of app/assets/stylesheets/home.scss, in function `asset-url`
+        from line 33:23 of app/assets/stylesheets/home.scss
+>>     background-image: asset-url("top image.png");
+
+   ----------------------^
+):
+    1: <!-- Navigation -->
+    2: <nav class="navbar navbar-expand-md fixed-top u-dimension-2">
+    3:   <div class="container">
+    4:     <%= link_to image_tag('logo.png', :class => 'navbar-brand'), root_path   %>
+    5:     
+    6:     <% if current_page?('/') %>
+    7:     <div class="header-list loc-srch">
+  
+app/assets/stylesheets/home.scss:33
+app/views/shared/_nav.html.erb:4:in `_app_views_shared__nav_html_erb___687385880204847410_47355606136500'
+app/views/home/index.html.erb:1:in `_app_views_home_index_html_erb___2116836081252058901_47355578514240'
+Started GET "/" for ::1 at 2020-04-06 18:12:08 +0530
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (6.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 1]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (4105.3ms)
+  [1m[36mDish Load (30.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (37.4ms)
+  Rendered home/index.html.erb within layouts/application (4167.8ms)
+Completed 200 OK in 4646ms (Views: 4563.0ms | ActiveRecord: 53.5ms)
+
+

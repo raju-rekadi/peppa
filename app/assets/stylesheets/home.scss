@@ -29,7 +29,11 @@
   }
 
   .bg{
-    background-image: url('/assets/top image.png');
+    /*background-image: url('/assets/top image.png');*/
+    background-image: url("top image.png");
+    /*background-image: image-url("city-lights1.jpg");*/
+
+
     background-size: cover;
     height: 400px;
     width:100%;
