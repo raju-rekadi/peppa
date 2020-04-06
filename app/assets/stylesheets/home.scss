@@ -29,11 +29,12 @@
   }
 
   .bg{
-    background-image: url('/assets/top image.png');
-    
-    background-size: cover;
-    height: 400px;
-    width:100%;
+   /* background-image: url('/assets/top image.png');
+
+    background-size: cover;*/
+   /* height: 400px;
+    width:100%;*/
+    position: relative;
   }
 
 
@@ -43,8 +44,10 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 20px;
-    padding-top: 150px;
+   
+     top:40%;
+    left: 34%;
+    position: absolute;
     font-size: 36px;
     font-style: normal;
     line-height: 50px;
@@ -58,6 +61,9 @@
     margin: auto;
     border-radius: 5px;
     padding: 8px;
+    position: absolute;
+    top:55%;
+    left: 33%;
   }
 
 
