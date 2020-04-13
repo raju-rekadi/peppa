@@ -1,0 +1,1257 @@
+# Logfile created on 2020-04-12 10:19:05 +0530 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 10:19:05 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [041e41e6] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [041e41e6] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 10:21:19 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [b128a6f6] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [b128a6f6] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 10:24:29 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [6670595f] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [6670595f] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 10:29:41 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [1c685c31] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [1c685c31] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 13:42:48 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [6043725e] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [6043725e] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 13:51:42 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [69e55846] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [69e55846] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 13:55:15 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4a8ac2ca] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [4a8ac2ca] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 14:08:35 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [843d1672] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [843d1672] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-12 14:09:12 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b7341a55] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [b7341a55] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:22:11 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [74e14dfa] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [74e14dfa] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:22:25 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9204e3e7] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [9204e3e7] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:22:33 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [593854c5] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [593854c5] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:24:32 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [572f9394] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [572f9394] Command: /usr/bin/env which passenger
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:27:14 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e6b40d59] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [e6b40d59] Command: /usr/bin/env which passenger
+ DEBUG [e6b40d59] 	/usr/bin/passenger
+ DEBUG [e6b40d59] Finished in 1.138 seconds with exit status 0 (successful).
+ DEBUG [017a13e7] Running [ -d ~/.rvm ] as ubuntu@52.66.252.224
+ DEBUG [017a13e7] Command: [ -d ~/.rvm ]
+ DEBUG [017a13e7] Finished in 0.247 seconds with exit status 0 (successful).
+ DEBUG [02917c2c] Running ~/.rvm/bin/rvm version as ubuntu@52.66.252.224
+ DEBUG [02917c2c] Command: ~/.rvm/bin/rvm version
+ DEBUG [02917c2c] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [02917c2c] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG [532e7109] Running ~/.rvm/bin/rvm current as ubuntu@52.66.252.224
+ DEBUG [532e7109] Command: ~/.rvm/bin/rvm current
+ DEBUG [532e7109] 	ruby-2.7.0
+ DEBUG [532e7109] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [0c16ee56] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@52.66.252.224
+ DEBUG [0c16ee56] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [0c16ee56] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [0c16ee56] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [5131c96f] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.66.252.224
+ DEBUG [5131c96f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [5131c96f] Finished in 0.338 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-peppa-production-raju.sh 0.0%
+  INFO Uploading /tmp/git-ssh-peppa-production-raju.sh 100.0%
+  INFO [2574a175] Running /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh as ubuntu@52.66.252.224
+ DEBUG [2574a175] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh )
+  INFO [2574a175] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [ac946e7e] Running /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD as ubuntu@52.66.252.224
+ DEBUG [ac946e7e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD )
+ DEBUG [ac946e7e] 	4c8adbbe4785383c169474220b95b0a41ad25173	HEAD
+  INFO [ac946e7e] Finished in 1.241 seconds with exit status 0 (successful).
+  INFO [84258003] Running /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases as ubuntu@52.66.252.224
+ DEBUG [84258003] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases )
+ DEBUG [84258003] 	mkdir: 
+ DEBUG [84258003] 	cannot create directory ‘/home/deploy/peppa/shared’
+ DEBUG [84258003] 	: Permission denied
+ DEBUG [84258003] 	
+ DEBUG [84258003] 	mkdir: 
+ DEBUG [84258003] 	cannot create directory ‘/home/deploy/peppa/releases’
+ DEBUG [84258003] 	: Permission denied
+ DEBUG [84258003] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-13 05:32:59 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2d213c1d] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [2d213c1d] Command: /usr/bin/env which passenger
+ DEBUG [2d213c1d] 	/usr/bin/passenger
+ DEBUG [2d213c1d] Finished in 0.989 seconds with exit status 0 (successful).
+ DEBUG [bbf7b3e1] Running [ -d ~/.rvm ] as ubuntu@52.66.252.224
+ DEBUG [bbf7b3e1] Command: [ -d ~/.rvm ]
+ DEBUG [bbf7b3e1] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG [c0066b4b] Running ~/.rvm/bin/rvm version as ubuntu@52.66.252.224
+ DEBUG [c0066b4b] Command: ~/.rvm/bin/rvm version
+ DEBUG [c0066b4b] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [c0066b4b] Finished in 0.414 seconds with exit status 0 (successful).
+ DEBUG [c4e8b9db] Running ~/.rvm/bin/rvm current as ubuntu@52.66.252.224
+ DEBUG [c4e8b9db] Command: ~/.rvm/bin/rvm current
+ DEBUG [c4e8b9db] 	ruby-2.7.0
+ DEBUG [c4e8b9db] Finished in 0.509 seconds with exit status 0 (successful).
+ DEBUG [75e51c04] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@52.66.252.224
+ DEBUG [75e51c04] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [75e51c04] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [75e51c04] Finished in 0.820 seconds with exit status 0 (successful).
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [184e5c54] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.66.252.224
+ DEBUG [184e5c54] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [184e5c54] Finished in 0.249 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-peppa-production-raju.sh 0.0%
+  INFO Uploading /tmp/git-ssh-peppa-production-raju.sh 100.0%
+  INFO [49280bbf] Running /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh as ubuntu@52.66.252.224
+ DEBUG [49280bbf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh )
+  INFO [49280bbf] Finished in 0.421 seconds with exit status 0 (successful).
+  INFO [e16b658b] Running /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD as ubuntu@52.66.252.224
+ DEBUG [e16b658b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD )
+ DEBUG [e16b658b] 	4c8adbbe4785383c169474220b95b0a41ad25173	HEAD
+  INFO [e16b658b] Finished in 1.064 seconds with exit status 0 (successful).
+  INFO [20b2e08f] Running /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases as ubuntu@52.66.252.224
+ DEBUG [20b2e08f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases )
+  INFO [20b2e08f] Finished in 0.360 seconds with exit status 0 (successful).
+  INFO [47f71744] Running /usr/bin/env mkdir -p /home/deploy/peppa/shared/log /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/shared/public/system /home/deploy/peppa/shared/public/assets as ubuntu@52.66.252.224
+ DEBUG [47f71744] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/shared/log /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/shared/public/system /home/deploy/peppa/shared/public/assets )
+  INFO [47f71744] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [801e6c93] Running [ -f /home/deploy/peppa/current/REVISION ] as ubuntu@52.66.252.224
+ DEBUG [801e6c93] Command: [ -f /home/deploy/peppa/current/REVISION ]
+ DEBUG [801e6c93] Finished in 0.227 seconds with exit status 1 (failed).
+ DEBUG [fdb6d36a] Running [ -f /home/deploy/peppa/repo/HEAD ] as ubuntu@52.66.252.224
+ DEBUG [fdb6d36a] Command: [ -f /home/deploy/peppa/repo/HEAD ]
+ DEBUG [fdb6d36a] Finished in 0.233 seconds with exit status 1 (failed).
+ DEBUG [1d79fd3c] Running if test ! -d /home/deploy/peppa; then echo "Directory does not exist '/home/deploy/peppa'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [1d79fd3c] Command: if test ! -d /home/deploy/peppa; then echo "Directory does not exist '/home/deploy/peppa'" 1>&2; false; fi
+ DEBUG [1d79fd3c] Finished in 0.251 seconds with exit status 0 (successful).
+  INFO [adbdee0c] Running /usr/bin/env git clone --mirror https://github.com/raju-rekadi/peppa /home/deploy/peppa/repo as ubuntu@52.66.252.224
+ DEBUG [adbdee0c] Command: cd /home/deploy/peppa && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git clone --mirror https://github.com/raju-rekadi/peppa /home/deploy/peppa/repo )
+ DEBUG [adbdee0c] 	Cloning into bare repository '/home/deploy/peppa/repo'...
+  INFO [adbdee0c] Finished in 14.889 seconds with exit status 0 (successful).
+ DEBUG [eacdbcaf] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [eacdbcaf] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [eacdbcaf] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [a66f5e38] Running /usr/bin/env git remote set-url origin https://github.com/raju-rekadi/peppa as ubuntu@52.66.252.224
+ DEBUG [a66f5e38] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git remote set-url origin https://github.com/raju-rekadi/peppa )
+  INFO [a66f5e38] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [0e77702b] Running /usr/bin/env git remote update --prune as ubuntu@52.66.252.224
+ DEBUG [0e77702b] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0e77702b] 	Fetching origin
+  INFO [0e77702b] Finished in 0.951 seconds with exit status 0 (successful).
+ DEBUG [3f72396c] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [3f72396c] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [3f72396c] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [6f917d75] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306 as ubuntu@52.66.252.224
+ DEBUG [6f917d75] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306 )
+  INFO [6f917d75] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [11f1f3a9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/peppa/releases/20200413000306 as ubuntu@52.66.252.224
+ DEBUG [11f1f3a9] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/peppa/releases/20200413000306 )
+  INFO [11f1f3a9] Finished in 1.116 seconds with exit status 0 (successful).
+ DEBUG [e4525ac0] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [e4525ac0] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [e4525ac0] Finished in 0.352 seconds with exit status 0 (successful).
+ DEBUG [e71f84cf] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@52.66.252.224
+ DEBUG [e71f84cf] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e71f84cf] 	4c8adbbe4785383c169474220b95b0a41ad25173
+ DEBUG [e71f84cf] Finished in 0.241 seconds with exit status 0 (successful).
+ DEBUG [edc3a9e3] Running if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [edc3a9e3] Command: if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi
+ DEBUG [edc3a9e3] Finished in 0.387 seconds with exit status 0 (successful).
+  INFO [6ed2ad32] Running /usr/bin/env echo "4c8adbbe4785383c169474220b95b0a41ad25173" > REVISION as ubuntu@52.66.252.224
+ DEBUG [6ed2ad32] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "4c8adbbe4785383c169474220b95b0a41ad25173" > REVISION )
+  INFO [6ed2ad32] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [3e4eb686] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306 /home/deploy/peppa/releases/20200413000306/tmp /home/deploy/peppa/releases/20200413000306/public as ubuntu@52.66.252.224
+ DEBUG [3e4eb686] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306 /home/deploy/peppa/releases/20200413000306/tmp /home/deploy/peppa/releases/20200413000306/public )
+  INFO [3e4eb686] Finished in 0.234 seconds with exit status 0 (successful).
+ DEBUG [3498ffc6] Running [ -L /home/deploy/peppa/releases/20200413000306/log ] as ubuntu@52.66.252.224
+ DEBUG [3498ffc6] Command: [ -L /home/deploy/peppa/releases/20200413000306/log ]
+ DEBUG [3498ffc6] Finished in 0.342 seconds with exit status 1 (failed).
+ DEBUG [2c9eca06] Running [ -d /home/deploy/peppa/releases/20200413000306/log ] as ubuntu@52.66.252.224
+ DEBUG [2c9eca06] Command: [ -d /home/deploy/peppa/releases/20200413000306/log ]
+ DEBUG [2c9eca06] Finished in 0.222 seconds with exit status 0 (successful).
+  INFO [435b6fb3] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/log as ubuntu@52.66.252.224
+ DEBUG [435b6fb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/log )
+  INFO [435b6fb3] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [d05ab5cf] Running /usr/bin/env ln -s /home/deploy/peppa/shared/log /home/deploy/peppa/releases/20200413000306/log as ubuntu@52.66.252.224
+ DEBUG [d05ab5cf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/log /home/deploy/peppa/releases/20200413000306/log )
+  INFO [d05ab5cf] Finished in 0.236 seconds with exit status 0 (successful).
+ DEBUG [d7a5f650] Running [ -L /home/deploy/peppa/releases/20200413000306/tmp/pids ] as ubuntu@52.66.252.224
+ DEBUG [d7a5f650] Command: [ -L /home/deploy/peppa/releases/20200413000306/tmp/pids ]
+ DEBUG [d7a5f650] Finished in 0.244 seconds with exit status 1 (failed).
+ DEBUG [f75a00c7] Running [ -d /home/deploy/peppa/releases/20200413000306/tmp/pids ] as ubuntu@52.66.252.224
+ DEBUG [f75a00c7] Command: [ -d /home/deploy/peppa/releases/20200413000306/tmp/pids ]
+ DEBUG [f75a00c7] Finished in 0.231 seconds with exit status 1 (failed).
+  INFO [a55dcec3] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/releases/20200413000306/tmp/pids as ubuntu@52.66.252.224
+ DEBUG [a55dcec3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/releases/20200413000306/tmp/pids )
+  INFO [a55dcec3] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [d86add32] Running [ -L /home/deploy/peppa/releases/20200413000306/tmp/cache ] as ubuntu@52.66.252.224
+ DEBUG [d86add32] Command: [ -L /home/deploy/peppa/releases/20200413000306/tmp/cache ]
+ DEBUG [d86add32] Finished in 0.245 seconds with exit status 1 (failed).
+ DEBUG [2916b5b9] Running [ -d /home/deploy/peppa/releases/20200413000306/tmp/cache ] as ubuntu@52.66.252.224
+ DEBUG [2916b5b9] Command: [ -d /home/deploy/peppa/releases/20200413000306/tmp/cache ]
+ DEBUG [2916b5b9] Finished in 0.413 seconds with exit status 0 (successful).
+  INFO [8574921c] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/tmp/cache as ubuntu@52.66.252.224
+ DEBUG [8574921c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/tmp/cache )
+  INFO [8574921c] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [8620ab1c] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/releases/20200413000306/tmp/cache as ubuntu@52.66.252.224
+ DEBUG [8620ab1c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/releases/20200413000306/tmp/cache )
+  INFO [8620ab1c] Finished in 0.324 seconds with exit status 0 (successful).
+ DEBUG [7e3ea985] Running [ -L /home/deploy/peppa/releases/20200413000306/tmp/sockets ] as ubuntu@52.66.252.224
+ DEBUG [7e3ea985] Command: [ -L /home/deploy/peppa/releases/20200413000306/tmp/sockets ]
+ DEBUG [7e3ea985] Finished in 0.237 seconds with exit status 1 (failed).
+ DEBUG [e7e9fa87] Running [ -d /home/deploy/peppa/releases/20200413000306/tmp/sockets ] as ubuntu@52.66.252.224
+ DEBUG [e7e9fa87] Command: [ -d /home/deploy/peppa/releases/20200413000306/tmp/sockets ]
+ DEBUG [e7e9fa87] Finished in 0.221 seconds with exit status 1 (failed).
+  INFO [37ec71ff] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/releases/20200413000306/tmp/sockets as ubuntu@52.66.252.224
+ DEBUG [37ec71ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/releases/20200413000306/tmp/sockets )
+  INFO [37ec71ff] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [a6e58ee2] Running [ -L /home/deploy/peppa/releases/20200413000306/public/system ] as ubuntu@52.66.252.224
+ DEBUG [a6e58ee2] Command: [ -L /home/deploy/peppa/releases/20200413000306/public/system ]
+ DEBUG [a6e58ee2] Finished in 0.257 seconds with exit status 1 (failed).
+ DEBUG [59e2a6d4] Running [ -d /home/deploy/peppa/releases/20200413000306/public/system ] as ubuntu@52.66.252.224
+ DEBUG [59e2a6d4] Command: [ -d /home/deploy/peppa/releases/20200413000306/public/system ]
+ DEBUG [59e2a6d4] Finished in 0.232 seconds with exit status 1 (failed).
+  INFO [14a309f4] Running /usr/bin/env ln -s /home/deploy/peppa/shared/public/system /home/deploy/peppa/releases/20200413000306/public/system as ubuntu@52.66.252.224
+ DEBUG [14a309f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/public/system /home/deploy/peppa/releases/20200413000306/public/system )
+  INFO [14a309f4] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [6ff29f0f] Running [ -L /home/deploy/peppa/releases/20200413000306/public/assets ] as ubuntu@52.66.252.224
+ DEBUG [6ff29f0f] Command: [ -L /home/deploy/peppa/releases/20200413000306/public/assets ]
+ DEBUG [6ff29f0f] Finished in 0.224 seconds with exit status 1 (failed).
+ DEBUG [8fc2a90f] Running [ -d /home/deploy/peppa/releases/20200413000306/public/assets ] as ubuntu@52.66.252.224
+ DEBUG [8fc2a90f] Command: [ -d /home/deploy/peppa/releases/20200413000306/public/assets ]
+ DEBUG [8fc2a90f] Finished in 0.244 seconds with exit status 0 (successful).
+  INFO [773b0dcd] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/public/assets as ubuntu@52.66.252.224
+ DEBUG [773b0dcd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200413000306/public/assets )
+  INFO [773b0dcd] Finished in 0.232 seconds with exit status 0 (successful).
+  INFO [4e8e2216] Running /usr/bin/env ln -s /home/deploy/peppa/shared/public/assets /home/deploy/peppa/releases/20200413000306/public/assets as ubuntu@52.66.252.224
+ DEBUG [4e8e2216] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/public/assets /home/deploy/peppa/releases/20200413000306/public/assets )
+  INFO [4e8e2216] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [bc42bb1a] Running if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [bc42bb1a] Command: if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi
+ DEBUG [bc42bb1a] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [6920b220] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle check --path /home/deploy/peppa/shared/bundle as ubuntu@52.66.252.224
+ DEBUG [6920b220] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle check --path /home/deploy/peppa/shared/bundle )
+ DEBUG [6920b220] 	[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path '/home/deploy/peppa/shared/bundle'`, and stop using this flag
+ DEBUG [6920b220] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [6920b220] 	The following gems are missing
+ DEBUG [6920b220] 	 * rake (13.0.0)
+ DEBUG [6920b220] 	 * concurrent-ruby (1.1.5)
+ DEBUG [6920b220] 	 * i18n (1.7.0)
+ DEBUG [6920b220] 	 * minitest (5.13.0)
+ DEBUG [6920b220] 	 * thread_safe (0.3.6)
+ DEBUG [6920b220] 	 * tzinfo (1.2.5)
+ DEBUG [6920b220] 	 * activesupport (5.2.3)
+ DEBUG [6920b220] 	 * builder (3.2.3)
+ DEBUG [6920b220] 	 * erubi (1.9.0)
+ DEBUG [6920b220] 	 * mini_portile2 (2.4.0)
+ DEBUG [6920b220] 	 * nokogiri (1.10.5)
+ DEBUG [6920b220] 	 * rails-dom-testing (2.0.3)
+ DEBUG [6920b220] 	 * crass (1.0.5)
+ DEBUG [6920b220] 	 * loofah (2.3.1)
+ DEBUG [6920b220] 	 * rails-html-sanitizer (1.3.0)
+ DEBUG [6920b220] 	 * actionview (5.2.3)
+ DEBUG [6920b220] 	 * rack (2.0.7)
+ DEBUG [6920b220] 	 * rack-test (1.1.0)
+ DEBUG [6920b220] 	 * actionpack (5.2.3)
+ DEBUG [6920b220] 	 * nio4r (2.5.2)
+ DEBUG [6920b220] 	 * websocket-extensions (0.1.4)
+ DEBUG [6920b220] 	 * websocket-driver (0.7.1)
+ DEBUG [6920b220] 	 * actioncable (5.2.3)
+ DEBUG [6920b220] 	 * globalid (0.4.2)
+ DEBUG [6920b220] 	 * activejob (5.2.3)
+ DEBUG [6920b220] 	 * mini_mime (1.0.2)
+ DEBUG [6920b220] 	 * mail (2.7.1)
+ DEBUG [6920b220] 	 * actionmailer (5.2.3)
+ DEBUG [6920b220] 	 * activemodel (5.2.3)
+ DEBUG [6920b220] 	 * activemodel-serializers-xml (1.0.2)
+ DEBUG [6920b220] 	 * arel (9.0.0)
+ DEBUG [6920b220] 	 * activerecord (5.2.3)
+ DEBUG [6920b220] 	 * mimemagic (0.3.3)
+ DEBUG [6920b220] 	 * marcel (0.3.3)
+ DEBUG [6920b220] 	 * activestorage (5.2.3)
+ DEBUG [6920b220] 	 * public_suffix (4.0.1)
+ DEBUG [6920b220] 	 * addressable (2.7.0)
+ DEBUG [6920b220] 	 * net-ssh (5.2.0)
+ DEBUG [6920b220] 	 * net-scp (2.0.0)
+ DEBUG [6920b220] 	 * sshkit (1.21.0)
+ DEBUG [6920b220] 	 * airbrussh (1.4.0)
+ DEBUG [6920b220] 	 * io-like (0.3.0)
+ DEBUG [6920b220] 	 * archive-zip (0.12.0)
+ DEBUG [6920b220] 	 * execjs (2.7.0)
+ DEBUG [6920b220] 	 * autoprefixer-rails (9.7.1)
+ DEBUG [6920b220] 	 * bcrypt (3.1.13)
+ DEBUG [6920b220] 	 * bcrypt-ruby (3.1.5)
+ DEBUG [6920b220] 	 * bindex (0.8.1)
+ DEBUG [6920b220] 	 * msgpack (1.3.1)
+ DEBUG [6920b220] 	 * bootsnap (1.4.5)
+ DEBUG [6920b220] 	 * popper_js (1.14.5)
+ DEBUG [6920b220] 	 * method_source (0.9.2)
+ DEBUG [6920b220] 	 * thor (0.20.3)
+ DEBUG [6920b220] 	 * railties (5.2.3)
+ DEBUG [6920b220] 	 * ffi (1.11.1)
+ DEBUG [6920b220] 	 * sassc (2.2.1)
+ DEBUG [6920b220] 	 * sprockets (3.7.2)
+ DEBUG [6920b220] 	 * sprockets-rails (3.2.1)
+ DEBUG [6920b220] 	 * tilt (2.0.10)
+ DEBUG [6920b220] 	 * sassc-rails (2.1.2)
+ DEBUG [6920b220] 	 * bootstrap (4.3.1)
+ DEBUG [6920b220] 	 * byebug (11.0.1)
+ DEBUG [6920b220] 	 * capistrano (3.13.0)
+ DEBUG [6920b220] 	 * capistrano-bundler (1.6.0)
+ DEBUG [6920b220] 	 * capistrano-passenger (0.2.0)
+ DEBUG [6920b220] 	 * capistrano-rails (1.4.0)
+ DEBUG [6920b220] 	 * capistrano-rbenv (2.1.6)
+ DEBUG [6920b220] 	 * regexp_parser (1.6.0)
+ DEBUG [6920b220] 	 * xpath (3.2.0)
+ DEBUG [6920b220] 	 * capybara (3.29.0)
+ DEBUG [6920b220] 	 * mini_magick (4.9.5)
+ DEBUG [6920b220] 	 * ruby-vips (2.0.16)
+ DEBUG [6920b220] 	 * image_processing (1.9.3)
+ DEBUG [6920b220] 	 * carrierwave (2.0.2)
+ DEBUG [6920b220] 	 * childprocess (3.0.0)
+ DEBUG [6920b220] 	 * chromedriver-helper (2.1.1)
+ DEBUG [6920b220] 	 * coderay (1.1.2)
+ DEBUG [6920b220] 	 * coffee-script-source (1.12.2)
+ DEBUG [6920b220] 	 * coffee-script (2.4.1)
+ DEBUG [6920b220] 	 * coffee-rails (4.2.2)
+ DEBUG [6920b220] 	 * delayed_job (4.1.8)
+ DEBUG [6920b220] 	 * delayed_job_active_record (4.1.4)
+ DEBUG [6920b220] 	 * orm_adapter (0.5.0)
+ DEBUG [6920b220] 	 * responders (3.0.0)
+ DEBUG [6920b220] 	 * warden (1.2.8)
+ DEBUG [6920b220] 	 * devise (4.7.1)
+ DEBUG [6920b220] 	 * diff-lcs (1.3)
+ DEBUG [6920b220] 	 * factory_bot (5.1.1)
+ DEBUG [6920b220] 	 * factory_bot_rails (5.1.1)
+ DEBUG [6920b220] 	 * multipart-post (2.1.1)
+ DEBUG [6920b220] 	 * faraday (0.17.0)
+ DEBUG [6920b220] 	 * geocoder (1.5.2)
+ DEBUG [6920b220] 	 * gmaps4rails (2.1.2)
+ DEBUG [6920b220] 	 * multi_json (1.14.1)
+ DEBUG [6920b220] 	 * request_store (1.4.1)
+ DEBUG [6920b220] 	 * gon (6.2.1)
+ DEBUG [6920b220] 	 * temple (0.8.2)
+ DEBUG [6920b220] 	 * haml (5.1.2)
+ DEBUG [6920b220] 	 * hashie (3.6.0)
+ DEBUG [6920b220] 	 * jbuilder (2.9.1)
+ DEBUG [6920b220] 	 * jquery-rails (4.3.5)
+ DEBUG [6920b220] 	 * rails (5.2.3)
+ DEBUG [6920b220] 	 * jquery-star-rating-rails (4.0.4)
+ DEBUG [6920b220] 	 * turbolinks-source (5.2.0)
+ DEBUG [6920b220] 	 * turbolinks (5.2.1)
+ DEBUG [6920b220] 	 * jquery-turbolinks (2.1.0)
+ DEBUG [6920b220] 	 * jquery-ui-rails (6.0.1)
+ DEBUG [6920b220] 	 * jwt (2.2.1)
+ DEBUG [6920b220] 	 * kaminari-core (1.1.1)
+ DEBUG [6920b220] 	 * kaminari-actionview (1.1.1)
+ DEBUG [6920b220] 	 * kaminari-activerecord (1.1.1)
+ DEBUG [6920b220] 	 * kaminari (1.1.1)
+ DEBUG [6920b220] 	 * rb-fsevent (0.10.3)
+ DEBUG [6920b220] 	 * rb-inotify (0.10.0)
+ DEBUG [6920b220] 	 * ruby_dep (1.5.0)
+ DEBUG [6920b220] 	 * listen (3.1.5)
+ DEBUG [6920b220] 	 * multi_xml (0.6.0)
+ DEBUG [6920b220] 	 * nested_form (0.3.2)
+ DEBUG [6920b220] 	 * oauth2 (1.4.2)
+ DEBUG [6920b220] 	 * omniauth (1.9.0)
+ DEBUG [6920b220] 	 * omniauth-oauth2 (1.6.0)
+ DEBUG [6920b220] 	 * omniauth-facebook (5.0.0)
+ DEBUG [6920b220] 	 * omniauth-google-oauth2 (0.8.0)
+ DEBUG [6920b220] 	 * pg (1.1.4)
+ DEBUG [6920b220] 	 * pry (0.12.2)
+ DEBUG [6920b220] 	 * puma (3.12.1)
+ DEBUG [6920b220] 	 * rack-pjax (1.1.0)
+ DEBUG [6920b220] 	 * remotipart (1.4.4)
+ DEBUG [6920b220] 	 * rails_admin (2.0.1)
+ DEBUG [6920b220] 	 * rspec-support (3.9.0)
+ DEBUG [6920b220] 	 * rspec-core (3.9.0)
+ DEBUG [6920b220] 	 * rspec-expectations (3.9.0)
+ DEBUG [6920b220] 	 * rspec-mocks (3.9.0)
+ DEBUG [6920b220] 	 * rspec-rails (3.9.0)
+ DEBUG [6920b220] 	 * rubyzip (2.0.0)
+ DEBUG [6920b220] 	 * sass-listen (4.0.0)
+ DEBUG [6920b220] 	 * sass (3.7.4)
+ DEBUG [6920b220] 	 * sass-rails (5.1.0)
+ DEBUG [6920b220] 	 * selenium-webdriver (3.142.6)
+ DEBUG [6920b220] 	 * spring (2.1.0)
+ DEBUG [6920b220] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [6920b220] 	 * stripe (5.12.0)
+ DEBUG [6920b220] 	 * uglifier (4.2.0)
+ DEBUG [6920b220] 	 * web-console (3.7.0)
+ DEBUG [6920b220] 	 * will_paginate (3.2.1)
+ DEBUG [6920b220] 	 * will_paginate-bootstrap (1.0.2)
+ DEBUG [6920b220] 	Install missing gems with `bundle install`
+ DEBUG [6920b220] Finished in 1.444 seconds with exit status 1 (failed).
+  INFO [337ca3ab] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle install --path /home/deploy/peppa/shared/bundle --jobs 4 --without development test --deployment --quiet as ubuntu@52.66.252.224
+ DEBUG [337ca3ab] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle install --path /home/deploy/peppa/shared/bundle --jobs 4 --without development test --deployment --quiet )
+ DEBUG [337ca3ab] 	[DEPRECATED] The `--deployment` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set deployment 'true'`, and stop using this flag
+ DEBUG [337ca3ab] 	[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path '/home/deploy/peppa/shared/bundle'`, and stop using this flag
+ DEBUG [337ca3ab] 	[DEPRECATED] The `--without` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set without 'development test'`, and stop using this flag
+  INFO [337ca3ab] Finished in 218.513 seconds with exit status 0 (successful).
+ DEBUG [7a9325c5] Running if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [7a9325c5] Command: if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi
+ DEBUG [7a9325c5] Finished in 0.254 seconds with exit status 0 (successful).
+  INFO [da4423cb] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as ubuntu@52.66.252.224
+ DEBUG [da4423cb] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type.rb:27: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type/adapter_specific_registry.rb:9: warning: The called method `add_modifier' is defined here
+ DEBUG [da4423cb] 	yarn install v1.22.4
+ DEBUG [da4423cb] 	[1/4] Resolving packages...
+ DEBUG [da4423cb] 	success Already up-to-date.
+ DEBUG [da4423cb] 	Done in 0.06s.
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:27.648095 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/rails_admin-4d540b308ec792e61b7cd24122824d74adc52d5622e8fb7fdb58854fc89dec8b.js
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:27.648454 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/rails_admin-4d540b308ec792e61b7cd24122824d74adc52d5622e8fb7fdb58854fc89dec8b.js.gz
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.810890 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/rails_admin-f4a79bc39dc6d81fa9e6a315a4cd6e28b75ede340a07c05ca77402ccd13deda7.css
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.811375 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/rails_admin-f4a79bc39dc6d81fa9e6a315a4cd6e28b75ede340a07c05ca77402ccd13deda7.css.gz
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.817453 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/bg_fallback-bad53cee26694a42bdba717337e2de9f997ebf3ded300b8c3ff48ac5192c1903.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.818013 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/ui-icons_222222_256x240-310ae73efc6774716f0a80ce2141565fddec51702330a8066fd5e220437ae321.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.818436 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/ui-icons_454545_256x240-d59c6da436d1a19aa35bcbf2d400ad160f2b2568fbbfa2f9ebfc192d14025474.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.818895 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/icon_sprite-34a30806fcba43a2effc9739cb7a370a865199a7d38bfcbc7c2474ef3ff70ded.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.819342 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/slider_handles-4b523f3d1bd18af5fec23ec7d58ed85e4c7e8f4685fe85a8407e2d9017bf6484.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.819803 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/aristo/images/progress_bar-a2ed712d76dcffc7a06918cd389511bca2cf7bb91c12b1d865bf44c7b2c46289.gif
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.820248 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/multiselect/icon_sprite-34a30806fcba43a2effc9739cb7a370a865199a7d38bfcbc7c2474ef3ff70ded.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.820706 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-light-e7daf3169259a9fd6b8177b8e89ff2b964cd3dababd580a46d7fb4eecc07763b.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.821138 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-dark-bb53269e44173a496d2620bad201ca838a57b67c40b3439b5ce89345ef9e888b.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.821627 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-light-e1698d37f37f7db85ce6736810a34b1a229306be8a3f3be156fbaa47dd6cd160.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.822076 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-dark-2bf097798e2b1db766a16ff4f335d3fe94bd51f92dc2ddf47c8a370ba31189c0.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.822499 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/select2-8ddf680d1a86d603653e43f694bbb6dc1010aa81f5c0c9c87181e10e064e503b.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.825867 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_background-52967b595ae718ad95520b9cf2b22551fb8cb0d81a171db869b00d2b604b4976.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.826287 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/colorpicker_overlay-ba21ab85c59167b61af508e34a22ee344c97bb11454d287a47691fa2fb182856.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.826727 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/colorpicker_select-980ae86d6aab751f6f67a1191d78c0fa54b533583456b905ec43b34d5806ee2d.gif
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.827198 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_indic-8ca62ee85015e67671f2312a2fead633740335f65e254d8f4c3ea29b99f62de7.gif
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.827609 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_hex-4b1a7b08312edc3732cf30c7d8d5291abea41c64311c3d05d67a586cbe3dcf37.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.828022 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_rgb_r-54289ccad89df00514d84ba6d16d1a0abc0d61de95dcfc054bf2202e238a7cb6.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.828463 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_rgb_g-8ab4d41c46fc26080b75eecc6f8c25d8f6db5264cf56ecc4993f86d100ebd71f.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.828889 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_rgb_b-22f2da1810cd9da18a1f93418b8f45bd3cb676aa9790ad5e1aba37779fb3ac31.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.829310 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_hsb_h-df01edb80a710cdd9d9057201eaa682a8c86cd80ad6c6929f1d4a9182ad6aed3.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.829808 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_hsb_s-9277f3fd9eb79baef2384f7b38968184fd40d631024149c7b41543b7796c0706.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.830249 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_hsb_b-7160b5fd5c5779102cb91f771b80ef2621dabe10bf06e8359deaefece831b58b.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.831085 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/colorpicker/custom_submit-3a57bad878f6d608b998e36acefe2325d786d4631abeecc5d400ca5c062f5ce5.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.831536 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.832189 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.832433 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.833986 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.834581 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.835099 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.841475 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:29.841774 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.558367 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/jquery.colorpicker-55670c8f526fd133d8a52e4e7fec322ac94e6ffaa0460b89ce7a678788408105.js
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.558785 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/jquery.colorpicker-55670c8f526fd133d8a52e4e7fec322ac94e6ffaa0460b89ce7a678788408105.js.gz
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/script/value_conversion/string.rb:9: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.953027 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/jquery.colorpicker-17a04cd55ca585e49dd291bbe9ff1c5dc7ebefc092eac763d85512eba90f4821.css
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.953376 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rails_admin/jquery.colorpicker-17a04cd55ca585e49dd291bbe9ff1c5dc7ebefc092eac763d85512eba90f4821.css.gz
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.956576 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/156713624696643254-1831d0f18058262e2a2bce4048b096176e7e5105dbefc3fd45514c6d76fe7a75.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.959908 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/Burger-5cccdba0f502721c95682838a90827e37ce7419ebd91dcc58266e5fa765498b3.webp
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.963156 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/EggBiryani1-1-440cfb20d03e7708aa0b73699e5cb614b46b672a9873cc578ce244934e7043a2.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.967247 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/Nepalese_Veg_Pulao-be1bc2b1dfcc0c3c4cc378d9cbad68df213d5d89a666d51b4e5f04517f2dc8c7.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.971061 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/Prawn-Biryani-2ee4c38017e639693a4c280d493884db0dce5d05a31a04e313be1ca8a915197e.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.973180 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/add-ef1532208422d5ce359341dfe6ce2751e4f131e10ad2370fa574ff6cbb57d6cc.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.982579 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/background-for-food-website-3-a91eb38a92f154114ef7ed05c3b39eba3a405bebdadfc28cb96ca3f888026ed9.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:30.997428 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/banner-bg-8d8d5fb236a5939538bb7058302b3f03aa7e1bf8e73082f107075fc186cb3639.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.001343 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/big-star-3bc99e43c965ed5227c8a130446332b4163bff9221e0af73c9b15228b985029b.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.003332 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cancel-off-a9b80e5db625004a79c5a14979accb3501b273f69dfbbffbd9309c713c5cee78.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.005343 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cancel-on-ce07a8b5022e59a1bde9690b720a6bf10fc9767db6512d14ebff2782ec62b5bf.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.007373 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cart-2778b2657b6c10abfce8942132b5d568698e602af21e32c747b9104c6c1d781c.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.010960 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cb-746caa81e9ba8ab53a08fd8b4d8550943cd6646a9a7d5226940f014db26e78c5.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.014297 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cb0-ca45dcc2c83e517dfa73529519a1e036d47196afe5f02dbd1ccef6d8ca0362da.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.018763 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cb2-6e92482dc4b82ed4b32089dcd736845e2c5020533d2e92f238fb9d320ef706e8.webp
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.021381 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cb32-7693eab9128d9b936ecfd124f84fbf387464cb6b15e22d52997d364423963cc6.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.025667 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cb7-075e2b2bac70c16518d6de92ba58c66b7197101f9c96aaddb2664200eae5108c.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.032374 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cf-652a56d8aeaaf4d42e69db4d390ad4818895a435faf1e79a6732ca49ce8abd40.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.056827 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/cf6-29b38798f9c3ca119518e805a973143c0c0247e660b82eaa7f7b234eaa133611.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.064860 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/curd-rice-77fdcfc5d9152bef8da5427941cf89d28a16839585e6a8260c9117395667df4e.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.069901 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/delish-fried-rice-020-1543875572-930df8989bdd1e00e65e39e85316ef51b3a117ff4dd6391dd03ee2cf103c8c3a.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.072405 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/empty_cart-47238ac17949ccd99cea43bc2166901b9cb4e82d4b0cb8e3fbe81100a87b79e3.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.075086 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/empty_wishlist-60611dfadd897c454a700afa229e09e80aa0189a5e22f7ece151d83fbdd0fc96.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.079304 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/fooimage-fd83dd5f5113ee9a359d39ea440c7db0bfc9aaa752d3e16a5e33bdc44da247e3.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.082628 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/fooimg2-1cd7c4e7cd931a8b4ac690427f36db40cbd4c909fad1d3eb910fb0fa7a35fc45.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.087594 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/home-3cc4495c8d93bde784280386a13b79a5c3d3e6f5b7204e7f9ee65bb11cfd377a.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.093417 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/home_page_bg-eeef091f712cea10afc184b3785de4e26cfe0061eae06e917fa645582289ccba.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.097705 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/istockphoto-879661732-612x612-801a7662f55148f2bacceeb986a4e659b3b3c9f5008f8d23adaf16afd93acf71.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.101310 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/location-09ad0eb72783670ab3524a72eaa1150d96d55a1647856dec7f20fc7d1730de7c.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.104124 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/location1-030dc31f43a1a6d175b7315585bdf60b9960773050095a0d647e802e8cfd8296.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.107777 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/logo-5d7e86f5f78e8b26ba39fb3fd6cc059cdfffe7687114f2b7b6aa385f2e309722.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.110962 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/mid-star-48605d86afe193b99f36d5f4e2f47cbce9f5de6044b3891f15e76d8c5102fb46.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.122643 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/outdoor catering service in Coimbatore-ab18d9c4d390deb20c9e9b92e7a8031cc635461544e18750945f1eaf244f8789.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.149687 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/phone-img-58d4ec31d692d4f5d0d1d2517bf89ac1d20abecc2c6014a1125632a1de525d82.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.225357 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/pngtree-steak-snack-afternoon-tea-minimalistic-black-background-image_159767-85e4322a8c74a34f67daf9196a38a884bf0b4955185a7bdd0f27e0cb01880a7e.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.227636 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/pwd_show-15957ea3c9fed0ae73fb80576185c31a8333a5b53878d1e50ca91e3eee9d5f75.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.229659 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rating-a09ff72ec6671aa2f434920b37b8870b4e4d76b07e0dba3c0278132bf81fc0e0.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.231620 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/rupee-a3482d513bfffaf6b9f952297b41c4f2f757129733ac8ecaa78c15c54a37b2bd.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.236015 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/salad-2068220_960_720-ad0c55bc659152e449d8aa26840692d9e36499d225b681131635e3eb84a75a42.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.238206 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/search-8e14a2e5b9737f82d69b10344f8940601f699280d2adad2ab50d6180f5a86779.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.243181 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/slide1-c3e300ba5dac39677f8b89b73af3871d398909b1b761d74039b2f842490c8458.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.245804 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/star-half-db15fb9b3561d5c741d8aea9ef4f0957bd9bc51aa1caa6d7a5c316e083c1abd5.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.247758 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/star-off-6aaeebdaab93d594c005d366ce0d94fba02e7a07fd03557dbee8482f04a91c22.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.249971 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/star-on-fd26bf0ea0990cfd808f7540f958eed324b86fc609bf56ec2b3a5612cdfde5f5.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.260868 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/top image-5d5c93c7e948ef94226c7eaaa6da4f2de69b0b0ddbf96e180a827b7e0c531490.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.274374 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/treatyoself -e4c82781f263f54b858c5fa3b5ea0467524f32fd431dfffde48aad0fa285675f.webp
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.276678 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/update_pwd-395cf92b2cab190a0f100c9b94b627891ffb78fd1c75bdec6058b547dc71692c.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.278902 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/user-1a7e70bdb08512e8598168a2a37164661c9cc01a881fe2c7cf382f7edf842714.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.282460 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/user_address-8fa1f2e9efe4d0c7658a1813229d7193a9ac201efe5d955845e5814000481eeb.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.284940 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/user_orders-7c7fbcbe7f37e40c104095165da89ea068d436e0e7e8e4cbec4094f1407ed39f.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.288351 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/vb-b6035a089a273b2af3652b0e263b591e7bff219b5a825dc315d141c55d2cffdb.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.291875 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/veg-biryani-recipe-fa129212de161f37e260adc5d27198a844842965d9cb804120f4f3c2d8547d1a.jpg
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:31.295215 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/w-8bfec36eb0349d13b9a0b3fdde74eb9115c98c936d83424fc015eda1375272c3.png
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:40.273533 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/application-5b5712db4115e4997e68e07dae3307ff9326a3a04d5975954ca17fa6dae2aa3c.js
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:40.274128 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/application-5b5712db4115e4997e68e07dae3307ff9326a3a04d5975954ca17fa6dae2aa3c.js.gz
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/import_handler.rb:43: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:29: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/engine.rb:31: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:48.384939 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/application-edd3da597fff65c39248548ba2251c804335986e6f4b5d538c37ef4b74da3b45.css
+ DEBUG [da4423cb] 	I, [2020-04-13T00:07:48.385427 #27391]  INFO -- : Writing /home/deploy/peppa/releases/20200413000306/public/assets/application-edd3da597fff65c39248548ba2251c804335986e6f4b5d538c37ef4b74da3b45.css.gz
+  INFO [da4423cb] Finished in 36.922 seconds with exit status 0 (successful).
+ DEBUG [4dea33b7] Running if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [4dea33b7] Command: if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi
+ DEBUG [4dea33b7] Finished in 0.204 seconds with exit status 0 (successful).
+  INFO [ab63e84c] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306/assets_manifest_backup as ubuntu@52.66.252.224
+ DEBUG [ab63e84c] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200413000306/assets_manifest_backup )
+  INFO [ab63e84c] Finished in 0.240 seconds with exit status 0 (successful).
+ DEBUG [5bb11bb9] Running /usr/bin/env ls /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest* as ubuntu@52.66.252.224
+ DEBUG [5bb11bb9] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest* )
+ DEBUG [5bb11bb9] 	/home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json
+ DEBUG [5bb11bb9] Finished in 0.255 seconds with exit status 0 (successful).
+ DEBUG [8d8e0cb9] Running /usr/bin/env ls /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest* as ubuntu@52.66.252.224
+ DEBUG [8d8e0cb9] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest* )
+ DEBUG [8d8e0cb9] 	/home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json
+ DEBUG [8d8e0cb9] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [c5fc0fcc] Running /usr/bin/env cp /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json /home/deploy/peppa/releases/20200413000306/assets_manifest_backup as ubuntu@52.66.252.224
+ DEBUG [c5fc0fcc] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /home/deploy/peppa/releases/20200413000306/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json /home/deploy/peppa/releases/20200413000306/assets_manifest_backup )
+  INFO [c5fc0fcc] Finished in 0.244 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [13c8094b] Running if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [13c8094b] Command: if test ! -d /home/deploy/peppa/releases/20200413000306; then echo "Directory does not exist '/home/deploy/peppa/releases/20200413000306'" 1>&2; false; fi
+ DEBUG [13c8094b] Finished in 0.321 seconds with exit status 0 (successful).
+  INFO [365ecf2d] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake db:migrate as ubuntu@52.66.252.224
+ DEBUG [365ecf2d] Command: cd /home/deploy/peppa/releases/20200413000306 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type.rb:27: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type/adapter_specific_registry.rb:9: warning: The called method `add_modifier' is defined here
+ DEBUG [365ecf2d] 	rake aborted!
+ DEBUG [365ecf2d] 	PG::ConnectionBad: FATAL:  Peer authentication failed for user "foodfie"
+ DEBUG [365ecf2d] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/pg-1.1.4/lib/pg.rb:56:in `initialize'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/pg-1.1.4/lib/pg.rb:56:in `new'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/pg-1.1.4/lib/pg.rb:56:in `connect'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:90:in `connection'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/rake-13.0.0/exe/rake:27:in `<top (required)>'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/bin/ruby_executable_hooks:24:in `eval'
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [365ecf2d] 	Tasks: TOP => db:migrate
+ DEBUG [365ecf2d] 	(See full trace by running task with --trace)

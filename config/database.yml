@@ -80,9 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: foodfie_production
-  username: foodfie
-  password: <%= ENV['foodfie_DATABASE_PASSWORD'] %>
+  database: foodfie
+  username: root
+  password: root
 
 
 

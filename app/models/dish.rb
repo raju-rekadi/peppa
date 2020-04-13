@@ -2,7 +2,7 @@ class Dish < ApplicationRecord
     has_and_belongs_to_many :restaurants, :dependent => :destroy
     
     # Polymorphic association for pictures
-    has_many :pictures, as: :imageble, :dependent => :destroy
+    has_many :pictures, as: :imageable, :dependent => :destroy
     accepts_nested_attributes_for :pictures
     
     # Dish Category 

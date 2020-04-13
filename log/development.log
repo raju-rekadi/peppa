@@ -4435,3 +4435,1811 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 951ms (Views: 915.3ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-04-12 14:22:04 +0530
+  [1m[35m (62.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:74
+  [1m[36mCart Create (47.3ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-12 08:52:06.743753"], ["updated_at", "2020-04-12 08:52:06.743753"]]
+  ↳ app/controllers/application_controller.rb:74
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:74
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (32.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (6003.7ms)
+  [1m[36mDish Load (18.0ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (27.4ms)
+  Rendered home/index.html.erb within layouts/application (6068.6ms)
+Completed 200 OK in 6942ms (Views: 6667.7ms | ActiveRecord: 196.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 14:22:25 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+Completed 401 Unauthorized in 32ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/sign_in" for 127.0.0.1 at 2020-04-12 14:22:25 +0530
+Processing by Admin::SessionsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 247ms (Views: 225.4ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/admin/sign_in" for 127.0.0.1 at 2020-04-12 14:22:30 +0530
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oN8VJtFEuTDZRCDSW1X70MVGEllT7I0K9snqwuVQD6uxHuQ7STXKlmy5eSGqsxpzJMos9ivS1uyCVlcuIK3mCw==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (125.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "raju@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 481ms (ActiveRecord: 126.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 14:22:30 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.3ms)
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 262ms (Views: 187.4ms | ActiveRecord: 56.5ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 14:22:33 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.3ms)
+  Rendered admin/shared/_side_bar.html.erb (0.5ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 171ms (Views: 152.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 14:22:36 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 18.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 14:22:48 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 14:59:55 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 25.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 14:59:57 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 15:00:23 +0530
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 22.5ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/" for 127.0.0.1 at 2020-04-12 15:00:30 +0530
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (455.1ms)
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (2.8ms)
+  Rendered home/index.html.erb within layouts/application (463.3ms)
+Completed 200 OK in 756ms (Views: 740.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-12 19:15:01 +0530
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (81.5ms)
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (5.6ms)
+  Rendered home/index.html.erb within layouts/application (321.7ms)
+Completed 200 OK in 2463ms (Views: 2429.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:15:09 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.5ms)
+  Rendered admin/shared/_side_bar.html.erb (1.1ms)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 220ms (Views: 197.8ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:15:15 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.4ms)
+  Rendered admin/shared/_side_bar.html.erb (0.5ms)
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 169ms (Views: 163.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:15:18 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imageble_id' for Picture.):
+  
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/" for 127.0.0.1 at 2020-04-12 19:21:53 +0530
+  [1m[35m (32.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (1411.0ms)
+  [1m[36mDish Load (0.9ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (5.2ms)
+  Rendered home/index.html.erb within layouts/application (1468.4ms)
+Completed 200 OK in 2040ms (Views: 1922.3ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:22:03 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (145.9ms)
+Completed 200 OK in 340ms (Views: 275.4ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:22:06 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.5ms)
+  Rendered admin/shared/_side_bar.html.erb (0.3ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 201ms (Views: 165.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:22:08 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 51.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "locations_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"locations_restaurants"':...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"locations_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/admin/restaurants_controller.rb:18:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:23:15 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "locations_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"locations_restaurants"':...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"locations_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/admin/restaurants_controller.rb:18:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:23:58 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.5ms)
+  Rendered admin/shared/_side_bar.html.erb (0.3ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 326ms (Views: 235.5ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2020-04-12 19:24:07 +0530
+Processing by AdminController#dashboard as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admin_controller.rb:10
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/dashboard.html.erb:56
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/dashboard.html.erb:60
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/dashboard.html.erb:64
+  Rendered admin/dashboard.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 238ms (Views: 186.4ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:09 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.1ms)
+  Rendered admin/shared/_side_bar.html.erb (0.5ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 179ms (Views: 168.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:17 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (3.1ms)
+  Rendered admin/shared/_side_bar.html.erb (1.7ms)
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 227ms (Views: 212.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2020-04-12 19:24:20 +0530
+Processing by AdminController#dashboard as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admin_controller.rb:10
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/dashboard.html.erb:56
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/dashboard.html.erb:60
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/dashboard.html.erb:64
+  Rendered admin/dashboard.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 172ms (Views: 156.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:22 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.5ms)
+  Rendered admin/shared/_side_bar.html.erb (0.2ms)
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 164ms (Views: 156.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:24:24 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.6ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 233ms (Views: 208.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:35 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (3.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 209ms (Views: 191.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:24:40 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.5ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 223ms (Views: 205.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:44 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.9ms)
+  Rendered admin/shared/_side_bar.html.erb (0.4ms)
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 158ms (Views: 148.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:24:46 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.2ms)
+  Rendered admin/shared/_side_bar.html.erb (1.4ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 217ms (Views: 198.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2020-04-12 19:24:49 +0530
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/orders/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (2.1ms)
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  Rendered admin/orders/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 199ms (Views: 181.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:24:51 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (1.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.1ms)
+  Rendered admin/shared/_side_bar.html.erb (1.5ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 213ms (Views: 194.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:24:53 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.4ms)
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 166ms (Views: 159.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:24:55 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (3.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.0ms)
+  Rendered admin/shared/_side_bar.html.erb (1.3ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 238ms (Views: 218.0ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:26:42 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoLzrMF8rpwbF7rrr5NGaIekZqA+RLZaPk0Fb9H9Xg4WyJziLnoUMenbXuToJ3iecLhdcyaPcLQ8UqL6PgguNw==", "restaurant"=>{"name"=>"Kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x000055f4f458bd28 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-10712-1yrq0f7.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (1.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 3.1ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x000055f4f0aac8d8>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:31:15 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoLzrMF8rpwbF7rrr5NGaIekZqA+RLZaPk0Fb9H9Xg4WyJziLnoUMenbXuToJ3iecLhdcyaPcLQ8UqL6PgguNw==", "restaurant"=>{"name"=>"Kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f465a7f6f28 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-10712-p2whmm.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x00007f465a7d3410>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:32:43 +0530
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoLzrMF8rpwbF7rrr5NGaIekZqA+RLZaPk0Fb9H9Xg4WyJziLnoUMenbXuToJ3iecLhdcyaPcLQ8UqL6PgguNw==", "restaurant"=>{"name"=>"Kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x000056040b3f5cb8 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-11914-ovi2bh.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 20.3ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x000056040b002f98>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:32:48 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoLzrMF8rpwbF7rrr5NGaIekZqA+RLZaPk0Fb9H9Xg4WyJziLnoUMenbXuToJ3iecLhdcyaPcLQ8UqL6PgguNw==", "restaurant"=>{"name"=>"Kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00005604089d5d48 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-11914-1pqy1wi.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x0000560408edfa78>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started GET "/admin" for 127.0.0.1 at 2020-04-12 19:32:53 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.4ms)
+  Rendered admin/shared/_side_bar.html.erb (1.3ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 791ms (Views: 761.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:33:00 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.1ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 256ms (Views: 251.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:33:01 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.0ms)
+  Rendered admin/shared/_side_bar.html.erb (1.4ms)
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 240ms (Views: 227.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-12 19:33:03 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.6ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (155.8ms)
+Completed 200 OK in 420ms (Views: 344.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:33:35 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LYgBo9ISzSRKri44cPHgRN8R37dBaQxmuYltAWlt5i8Rwm7tPRR3ibhiyjc3Rd6yKA3kZFmiyoi7lsqUhpiWFg==", "restaurant"=>{"name"=>"kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f155d92ae68 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-11914-1xqtbic.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x00007f155d9133f8>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-12 19:45:59 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LYgBo9ISzSRKri44cPHgRN8R37dBaQxmuYltAWlt5i8Rwm7tPRR3ibhiyjc3Rd6yKA3kZFmiyoi7lsqUhpiWFg==", "restaurant"=>{"name"=>"kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f155d0b9928 @tempfile=#<Tempfile:/tmp/RackMultipart20200412-11914-s6n66e.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 23.3ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x000056040bbf7f60>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2020-04-13 04:48:06 +0530
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 3]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (1908.8ms)
+  [1m[36mDish Load (19.9ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (26.1ms)
+  Rendered home/index.html.erb within layouts/application (2003.7ms)
+Completed 200 OK in 2878ms (Views: 2755.8ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-13 04:48:22 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (52.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (249.3ms)
+Completed 200 OK in 1156ms (Views: 875.8ms | ActiveRecord: 75.6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2020-04-13 04:48:29 +0530
+Processing by AdminController#dashboard as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admin_controller.rb:10
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/dashboard.html.erb:56
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/dashboard.html.erb:60
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/dashboard.html.erb:64
+  Rendered admin/dashboard.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 383ms (Views: 240.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:48:32 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.4ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 434ms (Views: 188.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:48:36 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 17.8ms)
+
+
+  
+NameError (undefined local variable or method `imageUploader' for #<Class:0x00007f6eb64f33b0>):
+  
+app/models/picture.rb:5:in `<class:Picture>'
+app/models/picture.rb:1:in `<top (required)>'
+app/controllers/admin/restaurants_controller.rb:17:in `new'
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:48:55 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.4ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (321.9ms)
+Completed 200 OK in 845ms (Views: 545.4ms | ActiveRecord: 39.4ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:48:58 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.9ms)
+  Rendered admin/shared/_side_bar.html.erb (1.3ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 233ms (Views: 220.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:48:59 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.2ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 301ms (Views: 289.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:49:23 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"no+6zNsonZlw2DK5ZvAdmro0haiElMCG+ee3lF2uDq2ixdWCNC4nNIIU1rYhRCNsTSi+e5xfBmj7+BABslt+lA==", "restaurant"=>{"name"=>"Reeeeee", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6eb5c32b68 @tempfile=#<Tempfile:/tmp/RackMultipart20200413-13433-1aouxt.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `image_will_change!' for #<Picture:0x00007f6eb5bf0060>
+Did you mean?  name_will_change!):
+  
+app/controllers/admin/restaurants_controller.rb:22:in `create'
+  [1m[35m (30.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7229179700149822905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddImageToPictures (20200412232221)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (169.7ms)[0m  [1m[35mALTER TABLE "pictures" ADD "image" character varying[0m
+  ↳ db/migrate/20200412232221_add_image_to_pictures.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200412232221"]]
+  ↳ bin/rails:9
+  [1m[35m (102.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (44.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7229179700149822905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:53:37 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"no+6zNsonZlw2DK5ZvAdmro0haiElMCG+ee3lF2uDq2ixdWCNC4nNIIU1rYhRCNsTSi+e5xfBmj7+BABslt+lA==", "restaurant"=>{"name"=>"Reeeeee", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000563ae9183c40 @tempfile=#<Tempfile:/tmp/RackMultipart20200413-17094-riznk2.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 20.7ms)
+
+
+  
+ActiveModel::RangeError (9502458428 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+app/controllers/admin/restaurants_controller.rb:23:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7229179700149822905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangePhoneToBigInt (20200412232624)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (519.0ms)[0m  [1m[35mALTER TABLE "restaurants" ALTER COLUMN "phone" TYPE bigint[0m
+  ↳ db/migrate/20200412232624_change_phone_to_big_int.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200412232624"]]
+  ↳ bin/rails:9
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7229179700149822905)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:57:52 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.4ms)
+  Rendered admin/shared/_side_bar.html.erb (0.5ms)
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  Rendered admin/restaurants/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1934ms (Views: 1872.7ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:58:01 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.4ms)
+Started GET "/admin/restaurants/new" for 127.0.0.1 at 2020-04-13 04:58:01 +0530
+Processing by Admin::RestaurantsController#new as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/new.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.3ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (35.8ms)
+  Rendered admin/restaurants/new.html.erb within layouts/application (117.0ms)
+Completed 200 OK in 439ms (Views: 429.7ms | ActiveRecord: 2.1ms)
+
+
+Completed 200 OK in 659ms (Views: 559.3ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:58:20 +0530
+Processing by Admin::RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/dxXpQZQUY8le96klIO7nOkvibwy4IYSpE61TlEmHTbvR4Qex/7685ZC3XV5jAYhLiF9egARPZIjp1A1rHoTQ==", "restaurant"=>{"name"=>"Kokila", "email"=>"kokila@gmail.com", "phone"=>"9502458428", "pictures_attributes"=>{"0"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f7b11f8dd90 @tempfile=#<Tempfile:/tmp/RackMultipart20200413-17575-1uly8my.jpeg>, @original_filename="restaurant1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[pictures_attributes][0][image]\"; filename=\"restaurant1.jpeg\"\r\nContent-Type: image/jpeg\r\n">}}}, "commit"=>"Save"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+  [1m[36mRestaurant Create (38.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "created_at", "updated_at", "email", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kokila"], ["created_at", "2020-04-12 23:28:20.878047"], ["updated_at", "2020-04-12 23:28:20.878047"], ["email", "kokila@gmail.com"], ["phone", 9502458428]]
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+  [1m[36mPicture Create (31.2ms)[0m  [1m[32mINSERT INTO "pictures" ("imageable_id", "imageable_type", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"], ["created_at", "2020-04-12 23:28:20.921017"], ["updated_at", "2020-04-12 23:28:20.921017"], ["image", "restaurant1.jpeg"]]
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/restaurants_controller.rb:23
+Redirected to http://localhost:7000/admin/restaurants
+Completed 302 Found in 202ms (ActiveRecord: 99.1ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 04:58:21 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.3ms)
+  Rendered admin/shared/_side_bar.html.erb (0.5ms)
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (64.2ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 35.9ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "locations_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"locations_restaurants"':...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"locations_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    45:                         </div>
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                 <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+    49:                 <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
+    50:                 <td><%= link_to '', admin_restaurant_path(r),:class => 'far fa-eye btn btn-success'
+    51:                         %> 
+  
+app/views/admin/restaurants/index.html.erb:48:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083278443580'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083278443580'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:01:39 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.6ms)
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    45:                         </div>
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                <% if r.locations present? %> 
+    49:                   <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+    50:                   <% end %>
+    51:                 <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
+  
+app/views/admin/restaurants/index.html.erb:48:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083274282880'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083274282880'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:03:20 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/restaurants/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.4ms)
+
+
+  
+SyntaxError (/home/raju/Documents/foodfie_stripe_31_copy/foodfie_stripe/app/views/admin/restaurants/index.html.erb:48: syntax error, unexpected tFID, expecting keyword_then or ';' or '\n'
+...      if (r.locations) present?  
+...                       ^~~~~~~~
+/home/raju/Documents/foodfie_stripe_31_copy/foodfie_stripe/app/views/admin/restaurants/index.html.erb:100: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/admin/restaurants/index.html.erb:48: syntax error, unexpected tFID, expecting keyword_then or ';' or '\n'
+app/views/admin/restaurants/index.html.erb:100: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:03:43 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.7ms)
+  Rendered admin/shared/_side_bar.html.erb (1.1ms)
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (27.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    45:                         </div>
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                <% if r.dishes present? %> 
+    49: 
+    50: 
+    51:                   <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+  
+app/views/admin/restaurants/index.html.erb:48:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083197444940'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083197444940'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:05:39 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.5ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (432.4ms)
+Completed 500 Internal Server Error in 457ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `dishes' for #<#<Class:0x000055bb6a092560>:0x00007f7b11794030>
+Did you mean?  dishes_url):
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                 <% dishes = r.dishes %>
+    49:                <% if dishes present? %> 
+    50: 
+    51: 
+    52:                   <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+  
+app/views/admin/restaurants/index.html.erb:49:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083275433360'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083275433360'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:05:59 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (2.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.7ms)
+  Rendered admin/shared/_side_bar.html.erb (0.4ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (433.2ms)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `dishes1' for #<#<Class:0x000055bb6a092560>:0x00007f7b082a29b8>
+Did you mean?  dishes_url):
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                 <% dishes1 = r.dishes %>
+    49:                <% if dishes1 present? %> 
+    50: 
+    51: 
+    52:                   <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+  
+app/views/admin/restaurants/index.html.erb:49:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083197344200'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083197344200'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:06:31 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (769.0ms)
+Completed 500 Internal Server Error in 794ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dishes1' for #<#<Class:0x000055bb6a092560>:0x00007f7b127f6ce8>
+Did you mean?  dishes_url):
+    45:                         </div>
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                 <% dishes1 == r.dishes %>
+    49:                <% if dishes1 present? %> 
+    50: 
+    51: 
+  
+app/views/admin/restaurants/index.html.erb:48:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083284024320'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083284024320'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:07:06 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.0ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (809.2ms)
+Completed 500 Internal Server Error in 837ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dishes1' for #<#<Class:0x000055bb6a092560>:0x00007f7b10f913b0>
+Did you mean?  dishes_url):
+    45:                         </div>
+    46:                       </div>
+    47:                     <% end %></td>
+    48:                 <% dishes1 == r.dishes %>
+    49:                <% if dishes1 %> 
+    50: 
+    51: 
+  
+app/views/admin/restaurants/index.html.erb:48:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083271235240'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083271235240'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:07:18 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.3ms)
+  Rendered admin/shared/_side_bar.html.erb (0.6ms)
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (84.9ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 32.2ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "dishes_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"dishes_restaurants"'::re...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"dishes_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    46:                       </div>
+    47:                     <% end %></td>
+    48:               
+    49:                 <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
+    50:                 <td><%= link_to '', admin_restaurant_path(r),:class => 'far fa-eye btn btn-success'
+    51:                         %> 
+    52:            
+  
+app/views/admin/restaurants/index.html.erb:49:in `block in _app_views_admin_restaurants_index_html_erb__2636535970476757281_70083278419660'
+app/views/admin/restaurants/index.html.erb:27:in `_app_views_admin_restaurants_index_html_erb__2636535970476757281_70083278419660'
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:07:31 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.0ms)
+  Rendered admin/shared/_side_bar.html.erb (1.3ms)
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 617ms (Views: 600.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-13 05:07:43 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.5ms)
+  Rendered admin/shared/_side_bar.html.erb (1.0ms)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 329ms (Views: 272.8ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:07:48 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.7ms)
+  [1m[36mRestaurant Load (1.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 226ms (Views: 208.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:07:50 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 10.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "dishes_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"dishes_restaurants"'::re...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"dishes_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/admin/dishes_controller.rb:5:in `index'
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:08:00 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (3.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 10.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "dishes_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"dishes_restaurants"'::re...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"dishes_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/admin/dishes_controller.rb:5:in `index'
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:10:15 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+  Rendering admin/dishes/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (2.1ms)
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  ↳ app/views/admin/dishes/index.html.erb:21
+  Rendered admin/dishes/index.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 25.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<ActiveRecord::Relation []>):
+    72:     <div style="" class="link_back">
+    73:       <%= link_to 'Back', admin_restaurants_path, :class => 'btn btn-info btn-block'%>
+    74:     </div>
+    75:     <%= will_paginate @dishes, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
+    76:   </div>      
+    77: </div>
+    78: 
+  
+app/views/admin/dishes/index.html.erb:75:in `_app_views_admin_dishes_index_html_erb__293481701121259019_70083270800300'
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:10:42 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+  Rendering admin/dishes/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (2.0ms)
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/dishes/index.html.erb:21
+  Rendered admin/dishes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 294ms (Views: 230.7ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/admin/restaurants/1/dishes/new" for 127.0.0.1 at 2020-04-13 05:10:50 +0530
+Processing by Admin::DishesController#new as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (2.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:16
+  Rendering admin/dishes/new.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (3.0ms)
+  [1m[36mCategory Load (16.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/dishes/new.html.erb:55
+  Rendered admin/dishes/new.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 484ms (Views: 342.7ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/admin/restaurants/1/dishes/new" for 127.0.0.1 at 2020-04-13 05:11:04 +0530
+Processing by Admin::DishesController#new as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:16
+  Rendering admin/dishes/new.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (4.3ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/dishes/new.html.erb:55
+  Rendered admin/dishes/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 210ms (Views: 197.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:16:44 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (1.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 262], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:74
+  [1m[36mCart Create (59.3ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-12 23:46:44.718789"], ["updated_at", "2020-04-12 23:46:44.718789"]]
+  ↳ app/controllers/application_controller.rb:74
+  [1m[35m (85.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:74
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 167ms (ActiveRecord: 148.6ms)
+
+
+Started GET "/admin/sign_in" for 127.0.0.1 at 2020-04-13 05:16:45 +0530
+Processing by Admin::SessionsController#new as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 1860ms (Views: 1850.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/sign_in" for 127.0.0.1 at 2020-04-13 05:16:56 +0530
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tQc1yyxBySAiG5bVUuMlRc+3bWz2aZbea/WRB+h+bDRH8CFkdC2KMOMyRJsyz+4JC+kryewUBsi5MkZK3WmKdA==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (78.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "raju@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 345ms (ActiveRecord: 78.8ms)
+
+
+Processing by Admin::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tQc1yyxBySAiG5bVUuMlRc+3bWz2aZbea/WRB+h+bDRH8CFkdC2KMOMyRJsyz+4JC+kryewUBsi5MkZK3WmKdA==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 334ms (Views: 164.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/sign_in" for 127.0.0.1 at 2020-04-13 05:17:03 +0530
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vuvjdXO9vjkC5p4Eh6WNhGy5sz5ne4bhVP50aCINT6VMHPfaK9H9KcPPTErniUbIqOf1m30GFveGOaMlFxqp5Q==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "raju@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 185ms (ActiveRecord: 1.0ms)
+
+
+Processing by Admin::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vuvjdXO9vjkC5p4Eh6WNhGy5sz5ne4bhVP50aCINT6VMHPfaK9H9KcPPTErniUbIqOf1m30GFveGOaMlFxqp5Q==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 376ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/sign_in" for 127.0.0.1 at 2020-04-13 05:17:11 +0530
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tuHOUFiEhaJHdn84zPBrawlyrVhXZeKu+LTJHR7gwTpEFtr/AOjGsoZfrXas3KAnzSzr/U0Ycrgqcx5QK/cneg==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "raju@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 174ms (ActiveRecord: 0.8ms)
+
+
+Processing by Admin::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tuHOUFiEhaJHdn84zPBrawlyrVhXZeKu+LTJHR7gwTpEFtr/AOjGsoZfrXas3KAnzSzr/U0Ycrgqcx5QK/cneg==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 362ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/sign_in" for 127.0.0.1 at 2020-04-13 05:17:20 +0530
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y7j/VV1i/agSAgfmUR3D+ZbMee/GYVYmZDnEpso2J9SRT+v6BQ6+uNMr1agxMQi1UpI/StwcxjC2/hPr/yHBlA==", "admin"=>{"email"=>"raju@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "raju@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:7000/admin/restaurants/1/dishes
+Completed 302 Found in 183ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:17:20 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+  Rendering admin/dishes/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (11.7ms)
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/dishes/index.html.erb:21
+  Rendered admin/dishes/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 218ms (Views: 187.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2020-04-13 05:17:25 +0530
+Processing by Admin::RestaurantsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/restaurants/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.6ms)
+  Rendered admin/shared/_side_bar.html.erb (0.3ms)
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" ORDER BY "restaurants"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/restaurants/index.html.erb:27
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/index.html.erb:30
+  Rendered admin/restaurants/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 213ms (Views: 200.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/restaurants/1" for 127.0.0.1 at 2020-04-13 05:17:29 +0530
+Processing by Admin::RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/restaurants_controller.rb:12
+  Rendering admin/restaurants/show.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (3.1ms)
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/show.html.erb:9
+  Rendered admin/restaurants/show.html.erb within layouts/application (60.8ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 21.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "locations_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"locations_restaurants"':...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"locations_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    28:         </div><br/>
+    29: 
+    30:         <div>
+    31:           <% @restaurant.locations.each do|p|%>
+    32:             <label><b>Location: </b></label>
+    33:             <%= p.street %> ,
+    34:             <%= p.city %> ,
+  
+app/views/admin/restaurants/show.html.erb:31:in `_app_views_admin_restaurants_show_html_erb___715112184088810582_70083283901200'
+Started GET "/admin/restaurants/1/edit" for 127.0.0.1 at 2020-04-13 05:17:36 +0530
+Processing by Admin::RestaurantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (2.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/restaurants_controller.rb:34
+  Rendering admin/restaurants/edit.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (6.4ms)
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."imageable_id" = $1 AND "pictures"."imageable_type" = $2[0m  [["imageable_id", 1], ["imageable_type", "Restaurant"]]
+  ↳ app/views/admin/restaurants/edit.html.erb:23
+  Rendered admin/restaurants/edit.html.erb within layouts/application (58.1ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 10.4ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "locations_restaurants" does not exist
+LINE 8:                WHERE a.attrelid = '"locations_restaurants"':...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"locations_restaurants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    69:             <!-- <span class ="upload-preview"> <img /></span> <p> p.object.image.file.filename</p> -->
+    70:       
+    71: 
+    72:          <%= f.fields_for :locations do |l| %> 
+    73:                <div class="col-md-4 res_new">
+    74:                 <%= f.label :state %>
+    75:                 <%= l.select( :state, options_for_select("Select one"), {:prompt => 'Select state'}, {:class => 'form-control'}) %>
+  
+app/views/admin/restaurants/edit.html.erb:72:in `block in _app_views_admin_restaurants_edit_html_erb__2121197507239371089_70083270173940'
+app/views/admin/restaurants/edit.html.erb:4:in `_app_views_admin_restaurants_edit_html_erb__2121197507239371089_70083270173940'
+Started GET "/admin/restaurants/1/dishes" for 127.0.0.1 at 2020-04-13 05:17:43 +0530
+Processing by Admin::DishesController#index as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:4
+  Rendering admin/dishes/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (3.9ms)
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/admin/dishes/index.html.erb:21
+  Rendered admin/dishes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 223ms (Views: 206.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/restaurants/1/dishes/new" for 127.0.0.1 at 2020-04-13 05:17:47 +0530
+Processing by Admin::DishesController#new as HTML
+  Parameters: {"restaurant_id"=>"1"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mRestaurant Load (1.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/dishes_controller.rb:16
+  Rendering admin/dishes/new.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (8.1ms)
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/dishes/new.html.erb:55
+  Rendered admin/dishes/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 281ms (Views: 236.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-13 05:19:46 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (0.8ms)
+  Rendered admin/shared/_side_bar.html.erb (0.8ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 265ms (Views: 229.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/admin/orders" for 127.0.0.1 at 2020-04-13 05:19:50 +0530
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/orders/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (3.2ms)
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."created_at" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/orders/index.html.erb:18
+  Rendered admin/orders/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 308ms (Views: 289.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-13 05:19:52 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (1.4ms)
+  Rendered admin/shared/_side_bar.html.erb (1.4ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 253ms (Views: 237.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2020-04-13 05:19:54 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/shared/_nav.html.erb (3.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 216ms (Views: 186.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-04-13 05:19:56 +0530
+Processing by AdminController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/raju/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/shared/_header.html.erb (2.4ms)
+  Rendered admin/shared/_side_bar.html.erb (2.0ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  ↳ app/views/admin/index.html.erb:26
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  ↳ app/views/admin/index.html.erb:30
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:34
+  Rendered admin/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 240ms (Views: 220.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-13 05:19:58 +0530
+Processing by HomeController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:65
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 4]]
+  ↳ app/views/shared/_nav.html.erb:84
+  Rendered shared/_nav.html.erb (88.4ms)
+  [1m[36mDish Load (0.8ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" ORDER BY "dishes"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/home/_dishes.html.erb:1
+  Rendered home/_dishes.html.erb (10.8ms)
+  Rendered home/index.html.erb within layouts/application (166.7ms)
+Completed 200 OK in 363ms (Views: 331.9ms | ActiveRecord: 10.5ms)
+
+

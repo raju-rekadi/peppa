@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/capistrano/rvm.git
+  revision: 9cfef39cf0022839dca6b5b330dfefeb5fc363e7
+  specs:
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -381,6 +389,7 @@ DEPENDENCIES
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
   capistrano-rbenv (~> 2.1, >= 2.1.4)
+  capistrano-rvm!
   capybara (>= 2.15)
   carrierwave
   chromedriver-helper

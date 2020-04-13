@@ -2,7 +2,8 @@ class Admin::DishesController < ApplicationController
   before_action :authenticate_admin!
 	def index
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @dishes =   @restaurant.dishes.order(created_at: :asc).paginate(page:  params[:page], per_page: 4)
+    # @dishes =   @restaurant.dishes.order(created_at: :asc).paginate(page:  params[:page], per_page: 4)
+    @dishes = Dish.all.paginate(page:  params[:page], per_page: 4)
     @ratings = Dish.by_rating.all
   end
 

@@ -44,8 +44,11 @@ server "52.66.252.224", user: "ubuntu", roles: %w{app db web}
  set :ssh_options, {
    keys: %w(/home/raju/Downloads/peppa.pem),
    forward_agent: false,
-   auth_methods: %w(password)
+   auth_methods: %w(publickey)
  }
+
+ # set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
+
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
