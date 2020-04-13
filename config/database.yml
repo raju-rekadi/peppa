@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: foodfie
+  database: peppa
   username: root
   password: root
 
