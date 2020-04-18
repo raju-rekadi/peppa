@@ -45,8 +45,8 @@
                         </div>
                       </div>
                     <% end %></td>
-              
-                
+                <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+                <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
                 <td><%= link_to '', admin_restaurant_path(r),:class => 'far fa-eye btn btn-success'
                         %> 
            

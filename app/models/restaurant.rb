@@ -5,7 +5,7 @@ class Restaurant < ApplicationRecord
     has_and_belongs_to_many :dishes, :dependent => :destroy
     
     # polymorphic association for pictures
-    has_many :pictures, :as => :imageable, :dependent => :destroy
+    has_many :pictures, :as => :imageble, :dependent => :destroy
     validates_associated :pictures
     accepts_nested_attributes_for :pictures
 

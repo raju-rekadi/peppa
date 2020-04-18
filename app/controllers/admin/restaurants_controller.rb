@@ -15,7 +15,7 @@ class Admin::RestaurantsController < ApplicationController
   def new 
     @restaurant = Restaurant.new
     @restaurant.pictures.build
-    # @restaurant.locations.build  
+    @restaurant.locations.build  
   end   
    
   def create   

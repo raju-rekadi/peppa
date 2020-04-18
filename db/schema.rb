@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_232624) do
+ActiveRecord::Schema.define(version: 2020_04_18_030443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,15 +70,24 @@ ActiveRecord::Schema.define(version: 2020_04_12_232624) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
-    t.string "price"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "price"
+  end
+
+  create_table "dishes_restaurants", force: :cascade do |t|
+    t.integer "restaurant_id"
+    t.integer "dish_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dish_id"], name: "index_dishes_restaurants_on_dish_id"
+    t.index ["restaurant_id"], name: "index_dishes_restaurants_on_restaurant_id"
   end
 
   create_table "line_items", force: :cascade do |t|
     t.integer "quantity", default: 1
-    t.integer "product_id"
+    t.integer "dish_id"
     t.integer "cart_id"
     t.integer "order_id"
     t.datetime "created_at", null: false
@@ -95,6 +104,15 @@ ActiveRecord::Schema.define(version: 2020_04_12_232624) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+  end
+
+  create_table "locations_restaurants", force: :cascade do |t|
+    t.integer "restaurant_id"
+    t.integer "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_locations_restaurants_on_location_id"
+    t.index ["restaurant_id"], name: "index_locations_restaurants_on_restaurant_id"
   end
 
   create_table "orders", id: :serial, force: :cascade do |t|
@@ -116,12 +134,12 @@ ActiveRecord::Schema.define(version: 2020_04_12_232624) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "name"
-    t.integer "imageable_id"
-    t.string "imageable_type"
+    t.integer "imageble_id"
+    t.string "imageble_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
-    t.index ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id"
+    t.index ["imageble_type", "imageble_id"], name: "index_pictures_on_imageble_type_and_imageble_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -132,6 +150,24 @@ ActiveRecord::Schema.define(version: 2020_04_12_232624) do
     t.string "comments"
     t.integer "user_id"
     t.string "user_name"
+  end
+
+  create_table "restaurant_dishes", force: :cascade do |t|
+    t.uuid "restaurant_id"
+    t.uuid "dish_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dish_id"], name: "index_restaurant_dishes_on_dish_id"
+    t.index ["restaurant_id"], name: "index_restaurant_dishes_on_restaurant_id"
+  end
+
+  create_table "restaurant_locations", force: :cascade do |t|
+    t.uuid "restaurant_id"
+    t.uuid "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_restaurant_locations_on_location_id"
+    t.index ["restaurant_id"], name: "index_restaurant_locations_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
