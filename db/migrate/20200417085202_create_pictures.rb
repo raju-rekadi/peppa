@@ -1,5 +1,7 @@
 class CreatePictures < ActiveRecord::Migration[5.2]
  def change
+ 	drop_table :pictures
+
     create_table :pictures do |t|
       t.string  :name
       t.integer :imageable_id
