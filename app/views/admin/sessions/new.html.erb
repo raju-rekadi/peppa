@@ -1,6 +1,6 @@
 <br><br><br><br>
 <div class="container">
-  <div class="form-horizontal no-border user_form u-dimension-2"  style ="width: 400px;"align="center" >
+  <div class="form-horizontal no-border user_form u-dimension-2 admin_login"  style =""align="center" >
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h2 align="center">Admin Login</h2>
 
@@ -8,19 +8,19 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
       <% end %>
 
-      <div class="form-group">
+      <div class="form-group coll">
         <div class="col-sm-12">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control' %>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group coll">
         <div class="col-sm-12">
           <%= f.label :password %><br />
           <%= f.password_field :password, autocomplete: "current-password",class: 'form-control' %>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group coll">
         <div class="col-sm-12">
           <%= f.submit "Log in", class: 'btn btn-block btn-success btn'  %>
         </div>
@@ -33,6 +33,22 @@
     
   </div>
 </div> 
+
+<style>
+  .admin_login{
+    width: 400px;
+    }
+
+    @media only screen and (max-width: 600px) {
+    .admin_login{
+      width: 300px;
+    }
+    .coll{
+      width: 289px;
+    }
+}
+
+</style>
 
 
 
