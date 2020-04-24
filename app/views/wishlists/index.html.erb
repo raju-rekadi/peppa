@@ -1,5 +1,5 @@
 <%= render :partial => 'shared/nav' %>
-<div class="container" style="margin-top: 100px;">
+<div class="container" >
   <% if current_user.present? %>
     <% count_list = current_user.wishlists.count %>
     <div>
@@ -83,4 +83,38 @@
   <% end %>
   </div>
 </div>
+
+<style type="text/css">
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .nav-item{
+    padding-right: 7px;
+    display: inherit;
+  }
+  .forgot_pwd {
+    padding-left: 28px;
+  }
+  .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.img_cart {
+    height: 85px;
+    width: 85px;
+}
+#middlebox{
+  width: 37%;
+}
+#leftbox{
+  width: 33%;
+}
+}
+</style>
 

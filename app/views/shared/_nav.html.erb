@@ -1,9 +1,12 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md fixed-top u-dimension-2">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light u-dimension-2">
     <%= link_to image_tag('logo.png', :class => 'navbar-brand'), root_path   %>
-    
-    <% if current_page?('/') %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     <% if current_page?('/') %>
     <div class="header-list loc-srch">
       <ul class="nav navbar-nav">
         <li class="dropdown">
@@ -26,9 +29,10 @@
       </ul>
     </div>
     <% end %>
+    </ul>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-       <ul class="navbar-nav ml-auto">
+
+    <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <ul class="nav navbar-nav ml-auto">
               <% if current_user.present? %>
@@ -100,8 +104,5 @@
             </ul>
           </li>  
         </ul>
-    </div>
-
   </div>
 </nav>
-

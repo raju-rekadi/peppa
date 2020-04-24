@@ -6427,3 +6427,332 @@ Name                       PID      Description
 --------------------------------------------------------------------------
 W1R4DEQw                   1774     nginx/1.17.3 Phusion_Passenger/6.0.4
 Y1za4gir                   25476    nginx/1.17.3 Phusion_Passenger/6.0.4
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-04-20 12:14:06 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [06c99a7a] Running /usr/bin/env which passenger as ubuntu@52.66.252.224
+ DEBUG [06c99a7a] Command: /usr/bin/env which passenger
+ DEBUG [06c99a7a] 	/usr/bin/passenger
+ DEBUG [06c99a7a] Finished in 1.701 seconds with exit status 0 (successful).
+ DEBUG [cda3c4d0] Running [ -d ~/.rvm ] as ubuntu@52.66.252.224
+ DEBUG [cda3c4d0] Command: [ -d ~/.rvm ]
+ DEBUG [cda3c4d0] Finished in 0.329 seconds with exit status 0 (successful).
+ DEBUG [56740c43] Running ~/.rvm/bin/rvm version as ubuntu@52.66.252.224
+ DEBUG [56740c43] Command: ~/.rvm/bin/rvm version
+ DEBUG [56740c43] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [56740c43] Finished in 0.653 seconds with exit status 0 (successful).
+ DEBUG [73006930] Running ~/.rvm/bin/rvm current as ubuntu@52.66.252.224
+ DEBUG [73006930] Command: ~/.rvm/bin/rvm current
+ DEBUG [73006930] 	ruby-2.7.0
+ DEBUG [73006930] Finished in 1.024 seconds with exit status 0 (successful).
+ DEBUG [9024bcc7] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@52.66.252.224
+ DEBUG [9024bcc7] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9024bcc7] 	ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+ DEBUG [9024bcc7] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [a0006bf2] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.66.252.224
+ DEBUG [a0006bf2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a0006bf2] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-peppa-production-raju.sh 0.0%
+  INFO Uploading /tmp/git-ssh-peppa-production-raju.sh 100.0%
+  INFO [7966a1bd] Running /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh as ubuntu@52.66.252.224
+ DEBUG [7966a1bd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-peppa-production-raju.sh )
+  INFO [7966a1bd] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [1d39da94] Running /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD as ubuntu@52.66.252.224
+ DEBUG [1d39da94] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git ls-remote https://github.com/raju-rekadi/peppa HEAD )
+ DEBUG [1d39da94] 	9709e5fe421b10ef1ada79904de8316e52338627	HEAD
+  INFO [1d39da94] Finished in 1.125 seconds with exit status 0 (successful).
+  INFO [44358a69] Running /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases as ubuntu@52.66.252.224
+ DEBUG [44358a69] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/shared /home/deploy/peppa/releases )
+  INFO [44358a69] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [cae822e7] Running /usr/bin/env mkdir -p /home/deploy/peppa/shared/log /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/shared/public/system /home/deploy/peppa/shared/public/assets as ubuntu@52.66.252.224
+ DEBUG [cae822e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/shared/log /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/shared/public/system /home/deploy/peppa/shared/public/assets )
+  INFO [cae822e7] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG [144a1502] Running [ -f /home/deploy/peppa/current/REVISION ] as ubuntu@52.66.252.224
+ DEBUG [144a1502] Command: [ -f /home/deploy/peppa/current/REVISION ]
+ DEBUG [144a1502] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG [a3c234c2] Running /usr/bin/env cat /home/deploy/peppa/current/REVISION 2>/dev/null as ubuntu@52.66.252.224
+ DEBUG [a3c234c2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /home/deploy/peppa/current/REVISION 2>/dev/null )
+ DEBUG [a3c234c2] 	d11194d03818c885667490c2073e921859ce96ea
+ DEBUG [a3c234c2] Finished in 0.423 seconds with exit status 0 (successful).
+ DEBUG [c7eef3df] Running [ -f /home/deploy/peppa/repo/HEAD ] as ubuntu@52.66.252.224
+ DEBUG [c7eef3df] Command: [ -f /home/deploy/peppa/repo/HEAD ]
+ DEBUG [c7eef3df] Finished in 0.392 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/peppa/repo
+ DEBUG [bd323392] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [bd323392] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [bd323392] Finished in 0.399 seconds with exit status 0 (successful).
+  INFO [064a478f] Running /usr/bin/env git remote set-url origin https://github.com/raju-rekadi/peppa as ubuntu@52.66.252.224
+ DEBUG [064a478f] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git remote set-url origin https://github.com/raju-rekadi/peppa )
+  INFO [064a478f] Finished in 0.395 seconds with exit status 0 (successful).
+  INFO [4baebf39] Running /usr/bin/env git remote update --prune as ubuntu@52.66.252.224
+ DEBUG [4baebf39] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4baebf39] 	Fetching origin
+ DEBUG [4baebf39] 	From https://github.com/raju-rekadi/peppa
+   d11194d..9709e5f  master     -> master
+  INFO [4baebf39] Finished in 1.969 seconds with exit status 0 (successful).
+ DEBUG [f8bf94c5] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [f8bf94c5] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [f8bf94c5] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [2b215271] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415 as ubuntu@52.66.252.224
+ DEBUG [2b215271] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415 )
+  INFO [2b215271] Finished in 0.399 seconds with exit status 0 (successful).
+  INFO [967c616a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/peppa/releases/20200420064415 as ubuntu@52.66.252.224
+ DEBUG [967c616a] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/peppa/releases/20200420064415 )
+  INFO [967c616a] Finished in 0.631 seconds with exit status 0 (successful).
+ DEBUG [1231ac85] Running if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [1231ac85] Command: if test ! -d /home/deploy/peppa/repo; then echo "Directory does not exist '/home/deploy/peppa/repo'" 1>&2; false; fi
+ DEBUG [1231ac85] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [195f8d5f] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@52.66.252.224
+ DEBUG [195f8d5f] Command: cd /home/deploy/peppa/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-peppa-production-raju.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [195f8d5f] 	9709e5fe421b10ef1ada79904de8316e52338627
+ DEBUG [195f8d5f] Finished in 1.006 seconds with exit status 0 (successful).
+ DEBUG [d722976f] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [d722976f] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [d722976f] Finished in 0.259 seconds with exit status 0 (successful).
+  INFO [8db5c75a] Running /usr/bin/env echo "9709e5fe421b10ef1ada79904de8316e52338627" > REVISION as ubuntu@52.66.252.224
+ DEBUG [8db5c75a] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "9709e5fe421b10ef1ada79904de8316e52338627" > REVISION )
+  INFO [8db5c75a] Finished in 0.356 seconds with exit status 0 (successful).
+  INFO [f66c4ee0] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415 /home/deploy/peppa/releases/20200420064415/tmp /home/deploy/peppa/releases/20200420064415/public as ubuntu@52.66.252.224
+ DEBUG [f66c4ee0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415 /home/deploy/peppa/releases/20200420064415/tmp /home/deploy/peppa/releases/20200420064415/public )
+  INFO [f66c4ee0] Finished in 0.413 seconds with exit status 0 (successful).
+ DEBUG [a655d2ef] Running [ -L /home/deploy/peppa/releases/20200420064415/log ] as ubuntu@52.66.252.224
+ DEBUG [a655d2ef] Command: [ -L /home/deploy/peppa/releases/20200420064415/log ]
+ DEBUG [a655d2ef] Finished in 0.424 seconds with exit status 1 (failed).
+ DEBUG [e07d05e4] Running [ -d /home/deploy/peppa/releases/20200420064415/log ] as ubuntu@52.66.252.224
+ DEBUG [e07d05e4] Command: [ -d /home/deploy/peppa/releases/20200420064415/log ]
+ DEBUG [e07d05e4] Finished in 0.393 seconds with exit status 0 (successful).
+  INFO [1d3f4896] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/log as ubuntu@52.66.252.224
+ DEBUG [1d3f4896] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/log )
+  INFO [1d3f4896] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO [39011961] Running /usr/bin/env ln -s /home/deploy/peppa/shared/log /home/deploy/peppa/releases/20200420064415/log as ubuntu@52.66.252.224
+ DEBUG [39011961] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/log /home/deploy/peppa/releases/20200420064415/log )
+  INFO [39011961] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [8fab9e74] Running [ -L /home/deploy/peppa/releases/20200420064415/tmp/pids ] as ubuntu@52.66.252.224
+ DEBUG [8fab9e74] Command: [ -L /home/deploy/peppa/releases/20200420064415/tmp/pids ]
+ DEBUG [8fab9e74] Finished in 0.275 seconds with exit status 1 (failed).
+ DEBUG [8a131cc6] Running [ -d /home/deploy/peppa/releases/20200420064415/tmp/pids ] as ubuntu@52.66.252.224
+ DEBUG [8a131cc6] Command: [ -d /home/deploy/peppa/releases/20200420064415/tmp/pids ]
+ DEBUG [8a131cc6] Finished in 0.436 seconds with exit status 1 (failed).
+  INFO [3bc2b0b0] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/releases/20200420064415/tmp/pids as ubuntu@52.66.252.224
+ DEBUG [3bc2b0b0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/pids /home/deploy/peppa/releases/20200420064415/tmp/pids )
+  INFO [3bc2b0b0] Finished in 0.294 seconds with exit status 0 (successful).
+ DEBUG [d86df472] Running [ -L /home/deploy/peppa/releases/20200420064415/tmp/cache ] as ubuntu@52.66.252.224
+ DEBUG [d86df472] Command: [ -L /home/deploy/peppa/releases/20200420064415/tmp/cache ]
+ DEBUG [d86df472] Finished in 0.381 seconds with exit status 1 (failed).
+ DEBUG [8cadd784] Running [ -d /home/deploy/peppa/releases/20200420064415/tmp/cache ] as ubuntu@52.66.252.224
+ DEBUG [8cadd784] Command: [ -d /home/deploy/peppa/releases/20200420064415/tmp/cache ]
+ DEBUG [8cadd784] Finished in 0.348 seconds with exit status 0 (successful).
+  INFO [5bbce9ea] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/tmp/cache as ubuntu@52.66.252.224
+ DEBUG [5bbce9ea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/tmp/cache )
+  INFO [5bbce9ea] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [8a1513f9] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/releases/20200420064415/tmp/cache as ubuntu@52.66.252.224
+ DEBUG [8a1513f9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/cache /home/deploy/peppa/releases/20200420064415/tmp/cache )
+  INFO [8a1513f9] Finished in 0.323 seconds with exit status 0 (successful).
+ DEBUG [64a18c2d] Running [ -L /home/deploy/peppa/releases/20200420064415/tmp/sockets ] as ubuntu@52.66.252.224
+ DEBUG [64a18c2d] Command: [ -L /home/deploy/peppa/releases/20200420064415/tmp/sockets ]
+ DEBUG [64a18c2d] Finished in 0.443 seconds with exit status 1 (failed).
+ DEBUG [8bfa7db4] Running [ -d /home/deploy/peppa/releases/20200420064415/tmp/sockets ] as ubuntu@52.66.252.224
+ DEBUG [8bfa7db4] Command: [ -d /home/deploy/peppa/releases/20200420064415/tmp/sockets ]
+ DEBUG [8bfa7db4] Finished in 0.632 seconds with exit status 1 (failed).
+  INFO [f23bc7ef] Running /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/releases/20200420064415/tmp/sockets as ubuntu@52.66.252.224
+ DEBUG [f23bc7ef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/tmp/sockets /home/deploy/peppa/releases/20200420064415/tmp/sockets )
+  INFO [f23bc7ef] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG [f854134a] Running [ -L /home/deploy/peppa/releases/20200420064415/public/system ] as ubuntu@52.66.252.224
+ DEBUG [f854134a] Command: [ -L /home/deploy/peppa/releases/20200420064415/public/system ]
+ DEBUG [f854134a] Finished in 0.301 seconds with exit status 1 (failed).
+ DEBUG [76ba034f] Running [ -d /home/deploy/peppa/releases/20200420064415/public/system ] as ubuntu@52.66.252.224
+ DEBUG [76ba034f] Command: [ -d /home/deploy/peppa/releases/20200420064415/public/system ]
+ DEBUG [76ba034f] Finished in 0.468 seconds with exit status 1 (failed).
+  INFO [81ce980e] Running /usr/bin/env ln -s /home/deploy/peppa/shared/public/system /home/deploy/peppa/releases/20200420064415/public/system as ubuntu@52.66.252.224
+ DEBUG [81ce980e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/public/system /home/deploy/peppa/releases/20200420064415/public/system )
+  INFO [81ce980e] Finished in 0.292 seconds with exit status 0 (successful).
+ DEBUG [bddc93c7] Running [ -L /home/deploy/peppa/releases/20200420064415/public/assets ] as ubuntu@52.66.252.224
+ DEBUG [bddc93c7] Command: [ -L /home/deploy/peppa/releases/20200420064415/public/assets ]
+ DEBUG [bddc93c7] Finished in 0.640 seconds with exit status 1 (failed).
+ DEBUG [25519213] Running [ -d /home/deploy/peppa/releases/20200420064415/public/assets ] as ubuntu@52.66.252.224
+ DEBUG [25519213] Command: [ -d /home/deploy/peppa/releases/20200420064415/public/assets ]
+ DEBUG [25519213] Finished in 0.327 seconds with exit status 0 (successful).
+  INFO [82fd7aff] Running /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/public/assets as ubuntu@52.66.252.224
+ DEBUG [82fd7aff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/peppa/releases/20200420064415/public/assets )
+  INFO [82fd7aff] Finished in 0.329 seconds with exit status 0 (successful).
+  INFO [2e4b8700] Running /usr/bin/env ln -s /home/deploy/peppa/shared/public/assets /home/deploy/peppa/releases/20200420064415/public/assets as ubuntu@52.66.252.224
+ DEBUG [2e4b8700] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/shared/public/assets /home/deploy/peppa/releases/20200420064415/public/assets )
+  INFO [2e4b8700] Finished in 0.424 seconds with exit status 0 (successful).
+ DEBUG [ce91d68c] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [ce91d68c] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [ce91d68c] Finished in 0.467 seconds with exit status 0 (successful).
+ DEBUG [79330f75] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle check --path /home/deploy/peppa/shared/bundle as ubuntu@52.66.252.224
+ DEBUG [79330f75] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle check --path /home/deploy/peppa/shared/bundle )
+ DEBUG [79330f75] 	[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path '/home/deploy/peppa/shared/bundle'`, and stop using this flag
+ DEBUG [79330f75] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [79330f75] 	The following gems are missing
+ DEBUG [79330f75] 	 * io-like (0.3.0)
+ DEBUG [79330f75] 	 * archive-zip (0.12.0)
+ DEBUG [79330f75] 	 * bindex (0.8.1)
+ DEBUG [79330f75] 	 * byebug (11.0.1)
+ DEBUG [79330f75] 	 * regexp_parser (1.6.0)
+ DEBUG [79330f75] 	 * xpath (3.2.0)
+ DEBUG [79330f75] 	 * capybara (3.29.0)
+ DEBUG [79330f75] 	 * childprocess (3.0.0)
+ DEBUG [79330f75] 	 * chromedriver-helper (2.1.1)
+ DEBUG [79330f75] 	 * diff-lcs (1.3)
+ DEBUG [79330f75] 	 * factory_bot (5.1.1)
+ DEBUG [79330f75] 	 * factory_bot_rails (5.1.1)
+ DEBUG [79330f75] 	 * ruby_dep (1.5.0)
+ DEBUG [79330f75] 	 * listen (3.1.5)
+ DEBUG [79330f75] 	 * rspec-support (3.9.0)
+ DEBUG [79330f75] 	 * rspec-core (3.9.0)
+ DEBUG [79330f75] 	 * rspec-expectations (3.9.0)
+ DEBUG [79330f75] 	 * rspec-mocks (3.9.0)
+ DEBUG [79330f75] 	 * rspec-rails (3.9.0)
+ DEBUG [79330f75] 	 * rubyzip (2.0.0)
+ DEBUG [79330f75] 	 * selenium-webdriver (3.142.6)
+ DEBUG [79330f75] 	 * spring (2.1.0)
+ DEBUG [79330f75] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [79330f75] 	 * web-console (3.7.0)
+ DEBUG [79330f75] 	Install missing gems with `bundle install`
+ DEBUG [79330f75] Finished in 1.463 seconds with exit status 1 (failed).
+  INFO [4e90b801] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle install --path /home/deploy/peppa/shared/bundle --jobs 4 --without development test --deployment --quiet as ubuntu@52.66.252.224
+ DEBUG [4e90b801] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle install --path /home/deploy/peppa/shared/bundle --jobs 4 --without development test --deployment --quiet )
+ DEBUG [4e90b801] 	[DEPRECATED] The `--deployment` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set deployment 'true'`, and stop using this flag
+ DEBUG [4e90b801] 	[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path '/home/deploy/peppa/shared/bundle'`, and stop using this flag
+ DEBUG [4e90b801] 	[DEPRECATED] The `--without` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set without 'development test'`, and stop using this flag
+  INFO [4e90b801] Finished in 2.078 seconds with exit status 0 (successful).
+ DEBUG [09cec2a6] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [09cec2a6] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [09cec2a6] Finished in 0.626 seconds with exit status 0 (successful).
+  INFO [01e45232] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as ubuntu@52.66.252.224
+ DEBUG [01e45232] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type.rb:27: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type/adapter_specific_registry.rb:9: warning: The called method `add_modifier' is defined here
+ DEBUG [01e45232] 	yarn install v1.22.4
+ DEBUG [01e45232] 	[1/4] Resolving packages...
+ DEBUG [01e45232] 	success Already up-to-date.
+ DEBUG [01e45232] 	Done in 0.06s.
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/ffi-1.11.1/lib/ffi/pointer.rb:97: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+ DEBUG [01e45232] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/sassc-2.2.1/lib/sassc/functions_handler.rb:37: warning: rb_safe_level will be removed in Ruby 3.0
+  INFO [01e45232] Finished in 4.096 seconds with exit status 0 (successful).
+ DEBUG [b18a614f] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [b18a614f] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [b18a614f] Finished in 0.460 seconds with exit status 0 (successful).
+  INFO [589e6035] Running /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415/assets_manifest_backup as ubuntu@52.66.252.224
+ DEBUG [589e6035] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/peppa/releases/20200420064415/assets_manifest_backup )
+  INFO [589e6035] Finished in 0.385 seconds with exit status 0 (successful).
+ DEBUG [a2949f27] Running /usr/bin/env ls /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest* as ubuntu@52.66.252.224
+ DEBUG [a2949f27] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest* )
+ DEBUG [a2949f27] 	/home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json
+ DEBUG [a2949f27] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [208f3bc1] Running /usr/bin/env ls /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest* as ubuntu@52.66.252.224
+ DEBUG [208f3bc1] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest* )
+ DEBUG [208f3bc1] 	/home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json
+ DEBUG [208f3bc1] Finished in 0.403 seconds with exit status 0 (successful).
+  INFO [c4b3b0df] Running /usr/bin/env cp /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json /home/deploy/peppa/releases/20200420064415/assets_manifest_backup as ubuntu@52.66.252.224
+ DEBUG [c4b3b0df] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /home/deploy/peppa/releases/20200420064415/public/assets/.sprockets-manifest-3cd10f41b665c0e4c9e200faf7c80170.json /home/deploy/peppa/releases/20200420064415/assets_manifest_backup )
+  INFO [c4b3b0df] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [8cd02d5c] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [8cd02d5c] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [8cd02d5c] Finished in 0.362 seconds with exit status 0 (successful).
+  INFO [4af1af02] Running $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake db:migrate as ubuntu@52.66.252.224
+ DEBUG [4af1af02] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/faraday-0.17.0/lib/faraday/options.rb:166: warning: Capturing the given block using Proc.new is deprecated; use `&block` instead
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/tzinfo-1.2.5/lib/tzinfo/ruby_core_support.rb:142: warning: Using the last argument as keyword parameters is deprecated
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type.rb:27: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/type/adapter_specific_registry.rb:9: warning: The called method `add_modifier' is defined here
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.3/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.3/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/oid/specialized_string.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activemodel-5.2.3/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:705: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+ DEBUG [4af1af02] 	/home/deploy/peppa/shared/bundle/ruby/2.7.0/gems/activerecord-5.2.3/lib/active_record/timestamp.rb:105: warning: The called method `_update_record' is defined here
+  INFO [4af1af02] Finished in 2.987 seconds with exit status 0 (successful).
+  INFO [f9a4609e] Running /usr/bin/env ln -s /home/deploy/peppa/releases/20200420064415 /home/deploy/peppa/releases/current as ubuntu@52.66.252.224
+ DEBUG [f9a4609e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/peppa/releases/20200420064415 /home/deploy/peppa/releases/current )
+  INFO [f9a4609e] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [1ea621a1] Running /usr/bin/env mv /home/deploy/peppa/releases/current /home/deploy/peppa as ubuntu@52.66.252.224
+ DEBUG [1ea621a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /home/deploy/peppa/releases/current /home/deploy/peppa )
+  INFO [1ea621a1] Finished in 0.398 seconds with exit status 0 (successful).
+ DEBUG [e872b44b] Running if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi as ubuntu@52.66.252.224
+ DEBUG [e872b44b] Command: if test ! -d /home/deploy/peppa/releases/20200420064415; then echo "Directory does not exist '/home/deploy/peppa/releases/20200420064415'" 1>&2; false; fi
+ DEBUG [e872b44b] Finished in 0.426 seconds with exit status 0 (successful).
+ DEBUG [57a14242] Running /usr/bin/env passenger -v as ubuntu@52.66.252.224
+ DEBUG [57a14242] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env passenger -v )
+ DEBUG [57a14242] 	Phusion Passenger 6.0.4
+ DEBUG [57a14242] 	
+ DEBUG [57a14242] Finished in 0.491 seconds with exit status 0 (successful).
+  INFO [56578c62] Running /usr/bin/env passenger-config restart-app /home/deploy/peppa --ignore-app-not-running as ubuntu@52.66.252.224
+ DEBUG [56578c62] Command: cd /home/deploy/peppa/releases/20200420064415 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env passenger-config restart-app /home/deploy/peppa --ignore-app-not-running )
+ DEBUG [56578c62] 	It appears that multiple Phusion Passenger instances are running. Please select
+a specific one by passing:
+
+  --instance <NAME>
+
+The following Phusion Passenger instances are running:
+
+Name                       PID      Description
+--------------------------------------------------------------------------
+bZMkH07k                   31254    nginx/1.17.3 Phusion_Passenger/6.0.4
+W1R4DEQw                   1774     nginx/1.17.3 Phusion_Passenger/6.0.4

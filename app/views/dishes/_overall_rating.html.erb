@@ -1,7 +1,7 @@
   <h4>Overall Rating &nbsp;
     <%= @dish.ratings.average(:rating).present? ? @dish.ratings.average(:rating).round(1) : 0 %>
       <i class="review-rating" data-score = " <%= @dish.ratings.average(:rating).present? ? @dish.ratings.average(:rating).round(1) : 0 %>"></i> 
-  </h4><br>
+  </h4>
   <i >Based on <%= @dish.ratings.count(:rating) %> Reviews</i><br>
 
   <div>

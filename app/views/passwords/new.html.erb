@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg  static-top u-dimension-2" style="height: 66px;">
+<nav class="navbar navbar-expand-lg  static-top u-dimension-2" style="height: 86px;">
   <div class="container">
     <%= link_to image_tag('logo.png', :class => 'navbar-brand'), root_path   %>
     <div class="header-list loc-srch">
@@ -20,7 +20,7 @@
 </nav>
 
 <div class="container" align="center">
-  <div class="form-horizontal no-border form u-dimension-2"  style ="margin-top:30px; width: 450px;"align="center" >
+  <div class="form-horizontal no-border form u-dimension-2"  style ="margin-top:40px; width: 450px;"align="center" >
 	  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 			<p align="center" class="forgot_pwd_new">Forgot your password?</p>
 			<p class="forgot_txt_new" >We got you. Just enter your email below and we'll send you a link to get in.</p>  

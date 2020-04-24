@@ -11,7 +11,7 @@
         <div class="row d-flex justify-content-between px-3 top">
           <div class="d-flex">
             <h5>
-              ORDER<span class="text-primary font-weight-bold">&nbsp;&nbsp;<%= @order.transaction_id %></span>
+              ORDER<span class="order_no text-primary font-weight-bold">&nbsp;&nbsp;<%= @order.transaction_id %></span>
             </h5>
           </div>
           <div class="d-flex flex-column text-sm-right">
@@ -128,3 +128,36 @@
       <p align="center"><%= link_to 'Return to store', :root %></p><br><br><br>
 	</div>
 </div>
+
+<style type="text/css">
+   .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.nav-item{
+    padding-right: 7px;
+        display: inherit;
+
+  }
+
+  .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+
+  .account{
+    margin-bottom: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .icon-content{
+    width:50px;
+  }
+  .order_no{
+    display: block;
+    font-size: 15px;
+  }
+
+  </style>

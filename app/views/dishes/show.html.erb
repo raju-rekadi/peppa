@@ -65,30 +65,33 @@
   </div>
 </div>
   
-<br><br>
-
+<br>
+ 
 <div class="container">
+
+ <div style="text-align: right;">
+    <%= link_to "Add to Cart", line_items_path(:dish_id =>  @dish.id), :method => :post, :class => 'btn btn-sm btn-success' %>
+  </div>
   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no_padding_right 
+    <div class="col-md-6  no_padding_right 
           no_padding_left hover_outr" id="overall_rating"> 
       <%= render 'dishes/overall_rating' %>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no_padding_right 
+    <div class="col-md-6 no_padding_right 
               no_padding_left hover_outr" style="margin: 0px;" id ="all_reviews"> 
       <div align="right">
-        <%= link_to "Add to Cart", line_items_path(:dish_id =>  @dish.id), :method => :post, :class => 'btn btn-sm btn-success' %><br>
-
+       
         <span class="more btn_outer">
           <span class="most_review"> All Reviews </span>
           <% if current_user.nil? %> 
-            <%= link_to 'Write a Review', ratings_path, :class => 'load-more', :style => 'margin-left:100px;', method: :post %> 
+            <%= link_to 'Write a Review', ratings_path, :class => 'load-more', method: :post %> 
           <% end %>
 
           <% if current_user.present? %>
             <% pre_rated = @dish.ratings.find { |rating| rating.user_id == current_user.id} %>
             <% if pre_rated.nil? %>
-              <%= link_to 'Write a Review','#modaldevise', "data-toggle" => "modal", "data-target"=>"#modaldevise", :class => 'load-more', :style => 'margin-left:100px;' %>
+              <%= link_to 'Write a Review','#modaldevise', "data-toggle" => "modal", "data-target"=>"#modaldevise", :class => 'load-more' %>
                 <div class="modal fade" id="modaldevise" tabindex="-1" role="dialog" 
                     aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
@@ -193,3 +196,37 @@
     }); 
 });
 </script>
+
+<style type="text/css">
+  .form-group{
+    width: 100%;
+  }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .nav-item{
+    padding-right: 7px;
+    display: inherit;
+  }
+  .forgot_pwd {
+    padding-left: 28px;
+  }
+  .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.card{
+  height: 300px;
+}
+.most_review{
+  float: left;
+  padding-right: 0px;
+}
+}
+</style>

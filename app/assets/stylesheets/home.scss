@@ -594,6 +594,9 @@
     width: 130px;
     height: auto;
   }
+  .filter{
+    padding-left: 20px;
+  }
   .filter li:first-child {
     width: 10%;
     font-size: 12px;
@@ -610,7 +613,7 @@
     width: 200px;
     position: absolute;
     z-index: 999;
-    top: 91px;  
+    top: 5px;  
   }
 
   .selectBox {
@@ -690,7 +693,7 @@
     border: 1px solid rgb(206, 212, 218);
   }
  .ui-widget.ui-widget-content {
-    left: 238px !important;
+    left: 168px !important;
     width: 200px !important;
     z-index: 9999 !important;
   }
@@ -766,14 +769,18 @@
 
   .cart-badge--desktop {
     position: absolute;
-    top: 21px;
-    right: 90px;
-   
-  }
+    top: 20px;
+    right: 16px;
+}
 
-  .cart-badge--desktop1 {
+  /*.cart-badge--desktop1 {
     position: absolute;
     top: 21px;
     right: 140px;
    
-  }
+  }*/
+  .cart-badge--desktop1 {
+    position: absolute;
+    top: 20px;
+    right: 63px;
+}

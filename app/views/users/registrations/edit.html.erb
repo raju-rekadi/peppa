@@ -1,11 +1,11 @@
 <!-- Navigation -->
 <%= render :partial => 'shared/nav' %>
-<div class="container" style="margin-top: 90px"><br>
+<div class="container" style="margin-top: 10px"><br>
   <div style="margin-left: 55px">
     <%= link_to 'Your Account', user_path(current_user) , :class => 'link1'%> &nbsp;<i class="a-breadcrumb-divider">›</i><span> Change password </span>
   </div>
 
-  <div class="form-horizontal no-border user_form u-dimension-2"  style ="margin-top:30px; width: 450px;" 
+  <div class="form-horizontal no-border user_form u-dimension-2 password_change"  style ="" 
       align="center" >
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -45,14 +45,28 @@
   </div>
 </div> 
 
+<style type="text/css">
+   .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.nav-item{
+    padding-right: 7px;
+        display: inherit;
 
+  }
 
+  .cart-badge--desktop1{
+    position: static;
+  }
 
-
-
-
-
-
-
-
+  .cart-badge--desktop{
+    position: static;
+  } 
+  .password_change{
+    width: 320px;
+  }
+ .form-group{
+  width: 303px;
+ }
+  </style>
 

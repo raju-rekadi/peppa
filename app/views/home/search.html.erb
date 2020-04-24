@@ -2,11 +2,11 @@
 
 <!-- Navigation -->
 <%= render :partial => 'shared/nav' %>
-  <div class="container-fluid album text-muted" style="margin-top: 86px;">
+  <div class="container-fluid album text-muted" style="margin-top: 0px;">
   <% if @dishes.present? %>
-    <div>
+    <div class="col-md-12">
       <ul class="filter">
-        <li style="width: 50px;">
+        <li class="" style="display: none;">
           <div class="select_box"> filter</div>
         </li>
         <li>
@@ -60,14 +60,14 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12" style="position: absolute;top: 145px;">
+      <div class="search_dishes col-lg-12 col-md-12" style="position: absolute;top: 145px;">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-          <div id = "dishes" style="float: left;overflow-y:auto; height: 500px;clear: both">
+          <div id = "dishes" style="">
             <%= render :partial => 'home/search_dishes' %>  
           </div>
         </div>
 
-        <div id='map_canvas'class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="height: 500px;width: 635px;">
+        <div id='map_canvas'class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="">
           
         </div>
       </div>
@@ -104,6 +104,67 @@
 
 });
 </script>
+
+
+
+<style type="text/css">
+  #map_canvas{
+    height: 500px;width: 635px;
+  }
+  #dishes{
+    float: left;overflow-y:auto; height: 500px;clear: both
+  }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.filter{
+  display: block;
+}
+
+.filter li{
+  display: inline-block;
+}
+.multiselect{
+  position: static;
+  margin-left: 30px;
+
+}
+
+#checkboxes{
+      position: absolute;
+    z-index: 999;
+    width: 200px;
+}
+
+#map_canvas{
+  width: 100%;
+  margin-top: 50px;
+}
+.search_dishes{
+  margin-top: 70px;
+}
+.filter_label{
+  display: none;
+  width: 0px;
+}
+ .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.nav-item{
+    padding-right: 7px;
+        display: inherit;
+
+  }
+
+  .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+  
+}
+</style>
 
 
 
