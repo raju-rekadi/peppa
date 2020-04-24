@@ -1,40 +1,92 @@
-<div class="container">
-  <%= render :partial => 'admin/shared/nav'%>
-  <div><br>
-    <h3>All orders</h3><br>
-    <table  class="table" >   
-      <thead class="thead-light">
-        <tr>
-          <th>User</th>   
-          <th>Order No</th> 
-          <th>Order Date</th>
-          <th>Payment status</th>
-          <th>Order status</th>
-          <th>Total</th>   
-          <th>Update status</th>
-        </tr>   
-      </thead>   
-      <tbody id = "orders">  
-        <% @orders.each do|order|%>
-        <tr>
-          <td><%= order.user.email %></td>
-          <td><%= order.transaction_id %></td>
-          <td><%= order.created_at.to_date %></td>
-          <td><%= order.payment %></td>
-          <td><%= order.order_status %></td>   
-          <td>&#8377; <%= order.amount %></td>
-          <td><i class="fas fa-map-marker-alt"></i> <%= link_to "Tracking Update", admin_order_path(order), :class =>'link' %></td> 
-        </tr>
-        <% end %>    
-      </tbody>   
-    </table>
-  </div>
-    <div>
-    <div style="" class="link_back">
-      <%= link_to 'Back', admin_index_path, :class => 'btn btn-info btn-block btn_back'%>
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div>
+          <div>
+           <span class="h1">All Orders </span>
+         
+          </div><hr>
+          <table  class="table" >   
+            <thead class="thead-light">
+              <tr>
+                <th>User</th>   
+               
+                <th class="one">Order Date</th>
+                <th class="two">Payment status</th>
+                <th>Order status</th>
+                <th class="three">Total</th>   
+                <th>Update status</th>
+              </tr>   
+            </thead>   
+            <tbody id = "orders">  
+              <% @orders.each do|order|%>
+              <tr>
+                <td><%= order.user.email %></td>
+                <td class="one"><%= order.created_at.to_date %></td>
+                <td class="two"><%= order.payment %></td>
+                <td><%= order.order_status %></td>   
+                <td class="three">&#8377; <%= order.amount %></td>
+                <td><i class="fas fa-map-marker-alt"></i> <%= link_to "Tracking Update", admin_order_path(order), :class =>'link' %></td> 
+              </tr>
+              <% end %>    
+            </tbody>   
+          </table>
+        </div>
+          <div>
+          <div style="" class="link_back">
+            <%= link_to 'Back', admin_index_path, :class => 'btn btn-info btn-block btn_back'%>
+          </div>
+          <%= will_paginate @orders, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
+        </div> 
+      </div> 
+         
     </div>
-    <%= will_paginate @orders, renderer: BootstrapPagination::Rails, :class => 'menublock' %>
-  </div> 
-</div>  
+  </div>
+</div>
+
+
+<style>
+  .edit_dish{
+    width: 422px; margin: 0px auto;
+  }
+  @media only screen and (max-width: 600px) {
+    .edit_dish{
+      width: 310px;
+    }
+
+  .one, .two, .three, .four{
+    display: none;
+  }    
+  .h1{
+    font-size: 15px !important;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
   

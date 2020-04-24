@@ -20,7 +20,7 @@
 </nav>
 
 <div class="container" align="center">
-  <div class="form-horizontal no-border form u-dimension-2"  style ="margin-top:30px; width: 450px;"align="center" >
+  <div class="form-horizontal no-border form u-dimension-2 pwd_form"  >
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <%= f.hidden_field :reset_password_token %>
@@ -54,3 +54,40 @@
   </div>
 </div> 
 
+<style type="text/css">
+  .pwd_form{
+  
+    margin-top: 30px; width: 430px
+  
+  }
+  .col-sm-12{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .pwd_form {width:295px;}
+  .form-group{
+      width:220px;
+  }
+  .nav-item{
+    padding-right: 7px;
+    display: inherit;
+  }
+  .forgot_pwd {
+    padding-left: 28px;
+  }
+   
+  .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+}
+</style>

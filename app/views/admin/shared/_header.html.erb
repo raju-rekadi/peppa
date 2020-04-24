@@ -4,15 +4,95 @@
         <a href="/"><img class="" src="/assets/logo-5d7e86f5f78e8b26ba39fb3fd6cc059cdfffe7687114f2b7b6aa385f2e309722.png"></a>
       </div>
 
+
       <ul class="nav navbar-nav navbar-right">
         <li class="">
-          <a href="/admin" class="" >
-            <img src="https://demo.opencart.com/image/cache/profile-45x45.png" alt="demo demo" title="demo" id="user-profile" class="rounded-circle">Admin 
-          </a>
+          <span style="font-size:30px;cursor:pointer" class="side_bar" onclick="openNav()">&#9776;</span>
+        
         </li>
         <li>
-        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'fa fa-sign-out') %>
+        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'side_bar_log fa fa-sign-out') %>
       </a></li>
         </ul>
     </div>
   </header>
+   <div id="mySidenav" class="sidenav">
+ 
+  <div class="list-group list-group-flush">
+      <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-light closebtn" onclick="closeNav()">&times;</a>
+        <a href="/admin/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="/admin/restaurants" class="list-group-item list-group-item-action bg-light">Restaurants</a>
+        <a href="/admin/orders" class="list-group-item list-group-item-action bg-light">Orders</a>
+        <a href="/admin/users" class="list-group-item list-group-item-action bg-light">Users</a>
+          <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'list-group-item list-group-item-action bg-light fa fa-sign-out') %>
+       
+      </div>
+</div>
+
+  <style type="text/css">
+    .side_bar{
+      display: none;
+    }
+    .sidenav{
+      display: none;
+    }
+    @media only screen and (max-width: 600px) {
+   .side_bar{
+      display: block;
+    }
+    .side_bar_log{
+      display: none;
+    }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  display: block;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-color:#f8f9fa !important;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 26px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+}
+  </style>
+
+
+<script>
+function openNav() {
+ 
+   document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>

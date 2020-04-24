@@ -1,121 +1,167 @@
-<div class="container">
-  <%= render :partial => 'admin/shared/nav'%>
-  <div>
-    <%= form_for @restaurant, url: {action: :update}, html: {:class => 'edit_restaurant u-dimension-2'}  do |f| %>
-      <h2>Update Restaurant</h2><hr>
-      <div class="form-row">
-        <div class="col-md-6 res_new">
-          <%= f.label :name %>
-           <span class="err"><%= @restaurant.errors[:name].join('. ') %></span><br/>
-          <%= f.text_field :name , :class => 'form-control', :placeholder => 'Name',:maxlength => 30 %>
-        </div>
-        <div class="col-md-6 res_new">
-          <%= f.label :email %>
-           <span class="err"><%= @restaurant.errors[:email].join('. ') %></span><br/>
-          <%= f.text_field :email , :class => 'form-control', :placeholder => 'Email' %>
-        </div>
-        <div class="col-md-6 res_new">
-          <%= f.label :phone %>
-           <span class="err"><%= @restaurant.errors[:phone].join('. ') %></span><br/>
-          <%= f.text_field :phone , :class => 'form-control', :placeholder => 'phone', :maxlength => 10 %>
-        </div>
+
+
+
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid"><br>
        
-          <%= f.fields_for :pictures do |p| %>
-            <div class="col-md-5 res_new">
-              <%= f.label :image %> 
-              <%= p.file_field :image, class: "form-control file"  %>
-            </div>
-            <div class="col-md-1">
-              <% if p.object.image %>
-                <%= link_to image_tag(p.object.image.url.to_s, :class => 'img_preview db_image'),'#',
-                {:class=>" ", "data-toggle"=>"modal", "data-target" => "#myModal-#{p.object.id}"}%>
-              
-                <!-- Modal for image view-->
-                <div class="modal fade"  id="myModal-<%= p.object.id %>" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content modal-img-content">
-                      <div class="modal-body">
-                        <%= image_tag p.object.image_url.to_s ,:class => 'modal-img'%>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-              <span class ="upload-preview">
-                <a class=" " data-toggle="modal" data-target="#myModal" href="#">
-                  <img class="img_preview load_image" src="" style="display: none;">
-                </a>
-                <!-- Modal for image view-->
-                <div class="modal fade"  id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content modal-img-content">
-                      <div class="modal-body">
-                        <img class="modal-img" src="">
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </span>
-            </div>   
-          <% end %>  
-            <!-- <span class ="upload-preview"> <img /></span> <p> p.object.image.file.filename</p> -->
-      
-
-         <%= f.fields_for :locations do |l| %> 
-               <div class="col-md-4 res_new">
-                <%= f.label :state %>
-                <%= l.select( :state, options_for_select("Select one"), {:prompt => 'Select state'}, {:class => 'form-control'}) %>
-              </div>  
-              <div class="col-md-4 res_new">
-                <%= f.label :city %>
-                <%= l.select( :city, options_for_select("Select one"), {:prompt => 'Select city'}, {:class => 'form-control'}) %>
-              </div>
-          
-            
-             <div class="col-md-4 res_new">
-              <%= f.label :pincode %>
-              <%= l.text_field :pincode, class: "form-control", :maxlength => 6, :placeholder => 'pincode'  %>  
-            </div>
-
-            <div class="col-md-4 res_new">
-                <%= f.label :street %>
-                <%= l.text_field :street, class: "form-control", :placeholder => 'street'  %>
-            </div>
-            
-            <div class="col-md-4 res_new">
-              <%= f.label :latitude %>
-              <%= l.text_field :latitude, class: "form-control", :placeholder => 'latitude'  %>  
-            </div>
-            <div class="col-md-4 res_new">
-              <%= f.label :longitude %>
-              <%= l.text_field :longitude, class: "form-control", :placeholder => 'longitude'  %>  
-            </div>
-              <%= l.hidden_field :country %>
-              <%= l.hidden_field :state, :id => 'get_state1' %>
-              <%= l.hidden_field :city, :id => 'get_city1' %>
-         <% end %>
         
-    
-      </div><br>
-      <%= link_to 'Back', admin_restaurants_path, :class => 'btn btn-info'%>
-      <%= f.submit "Save", :class => 'btn btn-success modal_btn restaurant_update' %>
-      <% end %>
-  </div><br><br>
+        <div>
+          <%= form_for @restaurant, url: {action: :update}, html: {:class => 'edit_restaurant u-dimension-2'}  do |f| %>
+            <h2>Update Restaurant</h2><hr>
+            <div class="form-row">
+              <div class="col-md-6 res_new">
+                <%= f.label :name %>
+                 <span class="err"><%= @restaurant.errors[:name].join('. ') %></span><br/>
+                <%= f.text_field :name , :class => 'form-control', :placeholder => 'Name',:maxlength => 30 %>
+              </div>
+              <div class="col-md-6 res_new">
+                <%= f.label :email %>
+                 <span class="err"><%= @restaurant.errors[:email].join('. ') %></span><br/>
+                <%= f.text_field :email , :class => 'form-control', :placeholder => 'Email' %>
+              </div>
+              <div class="col-md-6 res_new">
+                <%= f.label :phone %>
+                 <span class="err"><%= @restaurant.errors[:phone].join('. ') %></span><br/>
+                <%= f.text_field :phone , :class => 'form-control', :placeholder => 'phone', :maxlength => 10 %>
+              </div>
+             
+                <%= f.fields_for :pictures do |p| %>
+                  <div class="col-md-5 res_new">
+                    <%= f.label :image %> 
+                    <%= p.file_field :image, class: "form-control file"  %>
+                  </div>
+                  <div class="col-md-1">
+                    <% if p.object.image %>
+                      <%= link_to image_tag(p.object.image.url.to_s, :class => 'img_preview db_image'),'#',
+                      {:class=>" ", "data-toggle"=>"modal", "data-target" => "#myModal-#{p.object.id}"}%>
+                    
+                      <!-- Modal for image view-->
+                      <div class="modal fade"  id="myModal-<%= p.object.id %>" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content modal-img-content">
+                            <div class="modal-body">
+                              <%= image_tag p.object.image_url.to_s ,:class => 'modal-img'%>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
+                    <span class ="upload-preview">
+                      <a class=" " data-toggle="modal" data-target="#myModal" href="#">
+                        <img class="img_preview load_image" src="" style="display: none;">
+                      </a>
+                      <!-- Modal for image view-->
+                      <div class="modal fade"  id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content modal-img-content">
+                            <div class="modal-body">
+                              <img class="modal-img" src="">
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                  </div>   
+                <% end %>  
+                  <!-- <span class ="upload-preview"> <img /></span> <p> p.object.image.file.filename</p> -->
+            
+
+               <%= f.fields_for :locations do |l| %> 
+                     <div class="col-md-4 res_new">
+                      <%= f.label :state %>
+                      <%= l.select( :state, options_for_select("Select one"), {:prompt => 'Select state'}, {:class => 'form-control'}) %>
+                    </div>  
+                    <div class="col-md-4 res_new">
+                      <%= f.label :city %>
+                      <%= l.select( :city, options_for_select("Select one"), {:prompt => 'Select city'}, {:class => 'form-control'}) %>
+                    </div>
+                
+                  
+                   <div class="col-md-4 res_new">
+                    <%= f.label :pincode %>
+                    <%= l.text_field :pincode, class: "form-control", :maxlength => 6, :placeholder => 'pincode'  %>  
+                  </div>
+
+                  <div class="col-md-4 res_new">
+                      <%= f.label :street %>
+                      <%= l.text_field :street, class: "form-control", :placeholder => 'street'  %>
+                  </div>
+                  
+                  <div class="col-md-4 res_new">
+                    <%= f.label :latitude %>
+                    <%= l.text_field :latitude, class: "form-control", :placeholder => 'latitude'  %>  
+                  </div>
+                  <div class="col-md-4 res_new">
+                    <%= f.label :longitude %>
+                    <%= l.text_field :longitude, class: "form-control", :placeholder => 'longitude'  %>  
+                  </div>
+                    <%= l.hidden_field :country %>
+                    <%= l.hidden_field :state, :id => 'get_state1' %>
+                    <%= l.hidden_field :city, :id => 'get_city1' %>
+               <% end %>
+              
+          
+            </div><br>
+            <%= link_to 'Back', admin_restaurants_path, :class => 'btn btn-info'%>
+            <%= f.submit "Save", :class => 'btn btn-success modal_btn restaurant_update' %>
+            <% end %>
+        </div><br><br>
+
+
+      <form name="myform" id="myForm" style="display: none;">
+        Select Country: <select name="state" id="countySel1" size="1">
+        <option value="" selected="selected">Select Country</option>
+        </select>
+        <input type="submit">
+      </form>
+
+     
+      </div>
+    </div>
+  </div>
 </div>
 
+<style>
 
-<form name="myform" id="myForm" style="display: none;">
-  Select Country: <select name="state" id="countySel1" size="1">
-  <option value="" selected="selected">Select Country</option>
-  </select>
-  <input type="submit">
-</form>
+
+  @media only screen and (max-width: 600px) {
+
+ .edit_restaurant{
+  width: 305px;
+ }
+    
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

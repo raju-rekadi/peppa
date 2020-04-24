@@ -1,6 +1,15 @@
-<div class="container" >
-  <%= render :partial => 'admin/shared/nav' %>
-  <div class=""style="width: 422px; margin: 0px auto;" >
+
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid"><br>
+       
+         <div class="edit_dish" >
     <%= form_for @dish, url: {action: :create}, html: {:class => 'u-dimension-2 new_dish',:style =>'padding:20px'} do |f| %>
       <h2 align="center"><%= @restaurant.name %></h2><hr>
      
@@ -70,7 +79,37 @@
 
     <% end %>
   </div>
-</div><br><br>
+     
+      </div>
+    </div>
+  </div>
+</div>
 
+
+
+
+<style>
+  .edit_dish{
+    width: 422px; margin: 0px auto;
+  }
+  @media only screen and (max-width: 600px) {
+    .edit_dish{
+      width: 310px;
+    }
+
+  .one, .two, .three, .four{
+    display: none;
+  }    
+  .h1{
+    font-size: 15px !important;
+  }
+}
+
+</style>
+
+
+
+
+  
 
 

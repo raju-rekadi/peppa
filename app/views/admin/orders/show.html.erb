@@ -1,20 +1,14 @@
-<br>
-<div class="container">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm   navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/admin">Admin panel <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <div>
-        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'btn btn-danger btn-sm') %>  
-      </div>
-    </div>
-  </nav>
 
-  <div style="margin-top: 26px;">
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+       <div style="margin-top: 26px;">
     <div>
       <h3 >Order Details</h3>
     </div>
@@ -93,5 +87,9 @@
     <div style="" class="link_back">
       <%= link_to 'Back', admin_orders_path, :class => 'btn btn-info btn-block btn_back'%>
     </div>
-  </div> <br><br>
+  </div> <br><br> 
+      </div> 
+         
+    </div>
+  </div>
 </div>

@@ -40,7 +40,7 @@
           <div class="select_box sort_by">
             <label>
               <select id="filter" class="sort">
-                <option selected="">Sort by </option>
+                <option value="all">Sort by </option>
                 <option value="price">PRICE</option>
                 <option value="ratings">RATING</option>
               </select>
@@ -51,7 +51,7 @@
           <div class="select_box rating_by">
             <label>
               <select id="rating_filter" class="sort_rating">
-                <option selected="" value="">All Rating </option>
+                <option value="all">All Rating </option>
                 <option value="3">3+</option>
                 <option value="4">4+</option>
                 <option value="5">5+</option>
@@ -95,3 +95,25 @@
     path: "/assets/"
   });
 </script>
+<style>
+@media only screen and (max-width: 600px) {
+ 
+  .nav-item{
+    padding-right: 7px;
+    display: inherit;
+  }
+    .cart-badge--desktop1{
+    position: static;
+  }
+
+  .cart-badge--desktop{
+    position: static;
+  } 
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+  .phone_img{
+    display: none;
+  }
+}
+</style>

@@ -119,6 +119,6 @@ config.serve_static_assets = true
     :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = { host: '10.90.90.15', port: 7000 }
+  config.action_mailer.default_url_options = { :host => 'http://ec2-52-66-252-224.ap-south-1.compute.amazonaws.com' }
 
 end

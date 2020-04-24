@@ -3,11 +3,11 @@
 
   <div class="main_div">
     <%= render :partial => 'admin/shared/side_bar'%>
-
+   
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <h1 class="mt-4">Dashboard</h1><hr>
-        
+      
         <div class="row no-gutters" style="margin-top: 40px; text-align: center;">
           <div class="col-sm-12 col-md mr-md-3 admin_col">
               <%= link_to 'Restaurant & Dishes management' , admin_restaurants_path %><br/><br/>
@@ -44,3 +44,29 @@
 
 
 
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+      @media only screen and (max-width: 600px) {
+
+   .no-gutters{
+    flex-wrap: inherit !important;
+   }
+
+   .admin_col{
+    margin-right: 5px;
+    font-size: 12px !important;
+    padding-top: 15px !important;
+    padding-bottom: 5px !important;
+    text-align: center;
+   }
+
+   h3{
+    font-size:12px !important;
+   }
+    
+}
+
+</style>

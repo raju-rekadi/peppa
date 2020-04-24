@@ -1,25 +1,51 @@
-<div class="container"><br>
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-sm   navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/admin">Admin panel <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <div>
-        <%= link_to('Logout', destroy_admin_session_path, method: :delete, :class => 'btn btn-danger btn-sm') %>  
-      </div>
+<div class="">
+  <%= render :partial => 'admin/shared/header'%>
+  <div class="main_div">
+    <!-- Sidebar -->
+    <%= render :partial => 'admin/shared/side_bar'%>
+    <!-- Sidebar -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="order_tracking u-dimension-2">
+          <h4> Order tracking details update </h4><hr>
+          <%= form_for @order, url:{action: :update} do |f| %>
+            <%= f.select :order_status, [ 'Processed','Shipped','En Route', 'Arrived' ], :prompt => 'Select One', :class => 'form-control' %> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+            <%= f.submit "Update", :class => 'btn btn-success' %>
+          <% end %>
+        </div>
+        <div style="" class="link_back">
+            <%= link_to 'Back', admin_order_path(@order), :class => 'btn btn-info btn-block btn_back'%>
+        </div>
+     
+      </div>   
     </div>
-  </nav>
-  <div class="order_tracking u-dimension-2">
-	  <h4> Order tracking details update </h4><hr>
-		<%= form_for @order, url:{action: :update} do |f| %>
-	    <%= f.select :order_status, [ 'Processed','Shipped','En Route', 'Arrived' ], :prompt => 'Select One', :class => 'form-control' %> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-	    <%= f.submit "Update", :class => 'btn btn-success' %>
-    <% end %>
-	</div>
-	<div style="" class="link_back">
-      <%= link_to 'Back', admin_order_path(@order), :class => 'btn btn-info btn-block btn_back'%>
   </div>
 </div>
+
+
+
+<style>
+  .edit_dish{
+    width: 422px; margin: 0px auto;
+  }
+  @media only screen and (max-width: 600px) {
+    .order_tracking{
+      width: 300px;
+    }
+    .link_back{
+      margin-left: 80px;
+    }
+
+    .edit_dish{
+      width: 310px;
+    }
+
+  .one, .two, .three, .four{
+    display: none;
+  }    
+  .h1{
+    font-size: 15px !important;
+  }
+}
+
+</style>

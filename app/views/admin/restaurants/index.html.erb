@@ -16,9 +16,9 @@
             <thead class="thead-light">
               <tr> 
                 <th>Restaurant</th> 
-                <th>Image</th>
-                <th>Location</th> 
-                <th>Dishes</th>
+                <th class="one">Image</th>
+                <th class="two">Location</th> 
+                <th class="three">Dishes</th>
                 <th>Actions</th> 
                 <th>Dishes</th>    
               </tr>   
@@ -27,7 +27,7 @@
             <% @restaurants.each do|r|%>
               <tr>
                 <td><%= r.name %></td>
-                <td><% r.pictures.each do|p|%>    
+                <td class="one"><% r.pictures.each do|p|%>    
                       <%= link_to image_tag(p.image_url.to_s ,:class => 'img'),'#',
                       {:class=>" ", "data-toggle"=>"modal", "data-target" => "#myModal-#{p.id}"}%>
                         <!-- Modal for image view-->
@@ -45,8 +45,8 @@
                         </div>
                       </div>
                     <% end %></td>
-                <td><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
-                <td><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
+                <td class="two"><%= truncate(r.locations.pluck(:street, :city, :state).join(',')) %></td>
+                <td class="three"><%= truncate(r.dishes.pluck(:name).join(',')) %></td>
                 <td><%= link_to '', admin_restaurant_path(r),:class => 'far fa-eye btn btn-success'
                         %> 
            
@@ -85,6 +85,22 @@
     </div>
   </div>
 </div>
+
+<style>
+
+
+  @media only screen and (max-width: 600px) {
+
+.one, .two, .three{
+  display: none;
+}    
+.h1{
+  font-size: 15px !important;
+}
+}
+
+</style>
+
 
 
 

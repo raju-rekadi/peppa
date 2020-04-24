@@ -17,7 +17,7 @@
 
 					<% @cart.line_items.each do |item| %>
 					<div class="cart_item">
-						<div class="" id="leftbox">
+						<div class="col-md-4" id="">
 							<%= link_to dish_path(item.dish) do %> 
 								<% item.dish.pictures.each do |p| %>
 									<%= image_tag(p.image_url, :class => 'img_cart') %>
@@ -25,7 +25,7 @@
 							<% end %>
 						</div>
 				
-						<div class="" id="middlebox">
+						<div class="col-md-4" id="">
 							<p style="text-transform:capitalize;">
 								<%= link_to item.dish.name,dish_path(item.dish), :class => 'cart_links'%>
 							</p>
@@ -34,7 +34,7 @@
 							<% end %>
 							
 							<%= link_to 'Remove', '#',{:class=>"cart_links", "data-toggle"=>"modal", 
-								"data-target" => "#delete-#{item.id}"} %><br><br><br>
+								"data-target" => "#delete-#{item.id}"} %><br>
 								<div class="modal fade  " id="delete-<%= item.id %>">
 									<div class="modal-dialog ">
 										<div class="modal-content">
@@ -54,8 +54,8 @@
 								</div>
 						</div>
 
-						<div class="" id="rightbox">
-							<p style="text-align:right;">Price: &#8377; <%= item.dish.price %></p><br>
+						<div class="col-md-4" id="checkout_price" style="">
+							<p >Price: &#8377; <%= item.dish.price %></p><br>
 							<span>Qty</span>&nbsp;&nbsp;
 							<%= link_to "-", line_item_reduce_path(:id => item), :class =>'quantity_icons', method: :post %>
 							<span class="quantity"><%= item.quantity %></span> 
@@ -128,8 +128,12 @@
   }
 
   .img_cart {
-    height: 85px;
-    width: 72px;
+    height: 96px;
+    width: 172px;
 }
+p{
+	margin-bottom: 2px !important;
+}
+
 }
 </style>
